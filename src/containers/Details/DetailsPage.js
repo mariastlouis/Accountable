@@ -12,7 +12,7 @@ const DetailsPage = ({data}) => {
         image = {data[dataPoint].image}
         website = {data[dataPoint].website}
         phone = {data[dataPoint].phone}
-        occuption = {data[dataPoint].occuption}
+        occupation = {data[dataPoint].occupation}
         district = {data[dataPoint].district}
         chamber = {data[dataPoint].chamber} />
     );
