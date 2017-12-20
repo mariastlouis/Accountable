@@ -3,17 +3,20 @@ import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 
 const DetailsPage = ({data}) => {
-  const mappedContact = data.map((dataPoint) =>{
+  let dataKeys = Object.keys(data);
+  const mappedContact = dataKeys.map((dataPoint) =>{
     return (
-      <li> {dataPoint.firstName} </li>
+      <Contact 
+        firstName = {data[dataPoint].firstName}
+        lastName = {data[dataPoint].lastName}/>
     );
   });
-console.log(data)
+
   return (
     <div className = "details-page">
-      <ul>
+      
         {mappedContact}
-      </ul>
+      
     </div>
   );
 };
