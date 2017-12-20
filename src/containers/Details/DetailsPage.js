@@ -3,8 +3,8 @@ import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 
 const DetailsPage = ({data}) => {
-  let dataKeys = Object.keys(data);
-  const mappedContact = dataKeys.map((dataPoint) =>{
+  // let dataKeys = Object.keys(data);
+  const mappedContact = Object.keys(data).map((dataPoint) =>{
     return (
       <Contact 
         firstName = {data[dataPoint].firstName}
