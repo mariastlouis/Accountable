@@ -2,38 +2,39 @@ import React from 'react';
 import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import * as actions from '../../actions/';
+import {selectNewLawmaker} from '../../helper/helper'
 
 export const SelectLawmaker = (props) => {
+let lawmaker = props.lawmakers
 
-const selectOptions = Object.keys(props.lawmakers).map((dataPoint, index) =>{
+const selectOptions = Object.keys(lawmaker).map((dataPoint, index) =>{
   return (
-    <option key = {index} value = {props.lawmakers[dataPoint].id}>
-      {`${props.lawmakers[dataPoint].contact.firstName} ${props.lawmakers[dataPoint].contact.lastName}`}
+    <option key = {index} value = {lawmaker[dataPoint].id}>
+      {`${lawmaker[dataPoint].contact.firstName} ${lawmaker[dataPoint].contact.lastName}`}
     </option>
   );
 })
 
 
- // const selectOptions = optionNames.map( (fileName) => {
- //    return (
- //      <option key={fileName} value={fileName}>
- //        {fileName} 
- //      </option>
- //    );
- //  });
-  
+
+const selectLawmaker = async(event, id) =>{
+
+  const lawmakerData = await selectNewLawmaker(id);
+
+  props.lawmakerSelect(lawmakerData.id)
+  // console.log(lawmakerData)
+
+  // this.props.storeLawmakers(lawmakerData)
+
+  // props.lawmakerSelect(id)
+}
 
 
-  // const lawmakerName = Object.keys(props.lawmakers).map((datapoint) =>{
-  //   return console.log(props.lawmakers[datapoint].id)
-  // }) 
-
-   // value={currentDataFile}
-        // onChange={(e) => changeDataSet(e.target.value)}
 
   return (
-    <div className="lawmaker-select">
-      <select>
+    <div className="select">
+      <select onChange = {(e) => selectLawmaker(e, e.target.value)}>
      
         {selectOptions}
         
@@ -42,6 +43,10 @@ const selectOptions = Object.keys(props.lawmakers).map((dataPoint, index) =>{
   );
 };
 
+export const mapDispatchToProps = dispatch => ({
+  lawmakerSelect: id => dispatch(actions.setSelectLawmaker(id))
+
+});
 
 export const mapStateToProps = store => {
   return {
@@ -49,4 +54,4 @@ export const mapStateToProps = store => {
   }
 };
 
-export default connect(mapStateToProps, null)(SelectLawmaker);
+export default connect(mapStateToProps, mapDispatchToProps)(SelectLawmaker);
