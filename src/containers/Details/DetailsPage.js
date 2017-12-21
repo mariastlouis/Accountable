@@ -4,20 +4,22 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 export const DetailsPage = (props) => {
+let lawmaker = props.lawmakers
 
-const mapLawmakers = Object.keys(props.lawmakers).map((dataPoint) =>{
+const mapLawmakers = Object.keys(lawmaker).map((dataPoint, index) =>{
   return (
       <Contact 
-        id = {props.lawmakers[dataPoint].id}
-        firstName = {props.lawmakers[dataPoint].contact.firstName}
-        lastName = {props.lawmakers[dataPoint].contact.lastName}
-        party = {props.lawmakers[dataPoint].contact.party}
-        image = {props.lawmakers[dataPoint].contact.image}
-        website = {props.lawmakers[dataPoint].contact.website}
-        phone = {props.lawmakers[dataPoint].contact.phone}
-        occupation = {props.lawmakers[dataPoint].contact.occupation}
-        district = {props.lawmakers[dataPoint].contact.district}
-        chamber = {props.lawmakers[dataPoint].contact.chamber} 
+        key = {index}
+        id = {lawmaker[dataPoint].id}
+        firstName = {lawmaker[dataPoint].contact.firstName}
+        lastName = {lawmaker[dataPoint].contact.lastName}
+        party = {lawmaker[dataPoint].contact.party}
+        image = {lawmaker[dataPoint].contact.image}
+        website = {lawmaker[dataPoint].contact.website}
+        phone = {lawmaker[dataPoint].contact.phone}
+        occupation = {lawmaker[dataPoint].contact.occupation}
+        district = {lawmaker[dataPoint].contact.district}
+        chamber = {lawmaker[dataPoint].contact.chamber} 
         />
     )
 })

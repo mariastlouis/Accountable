@@ -1,12 +1,12 @@
 import key from '../key.js'
 
-const getLawmaker = async() => {
+export const getLawmaker = async() => {
   const lawmakerFetch = await fetch(`https://openstates.org/api/v1/legislators/?state=co&apikey=${key}`);
   const lawmakerObject = await lawmakerFetch.json();
   return cleanLawmaker(lawmakerObject)
 };
 
-export const cleanLawmaker = (lawmakers) => {
+const cleanLawmaker = (lawmakers) => {
   try {
     // let lawmakerKeys = Object.keys(lawmakers);
     const unresolvedPromises =  Object.keys(lawmakers).map(async(lawmaker) => {
@@ -33,6 +33,6 @@ export const cleanLawmaker = (lawmakers) => {
   }
 };
 
-export default getLawmaker ;
+// export default getLawmaker ;
 
   
