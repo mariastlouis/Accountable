@@ -1,19 +1,61 @@
 import React, { Component } from 'react';
 import './App.css';
+// import getLawmaker from '../../helper/helper';
+import DetailsPage from '../../containers/Details/DetailsPage'
+import { connect } from 'react-redux';
+import {cleanLawmaker} from '../../helper/helper'
+import * as actions from '../../actions/';
+import key from '../../key.js'
 
 class App extends Component {
+  constructor() {
+    super();
+    // this.state = {
+    //   lawmakerArray:[]
+    // };
+    
+  };
+
+componentDidMount = async ()  => {
+    // console.log(this.props)
+
+    // const getLawmaker = async() => {
+  const lawmakerFetch = await fetch(`https://openstates.org/api/v1/legislators/?state=co&apikey=${key}`);
+  const lawmakerObject = await lawmakerFetch.json();
+  // return cleanLawmaker(lawmakerObject)
+  // console.log(lawmakerObject)
+  this.props.storeLawmakers(lawmakerObject)
+
+  };
+
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div className="App">
+        
+          
+          <DetailsPage />
+        
+
+        </div>
+        
     );
   }
 }
 
-export default App;
+export const mapStateToProps = store => {
+  return {
+    lawmakers: store.lawmakers
+  }
+};
+
+export const mapDispatchToProps = dispatch => {
+  return {
+    storeLawmakers: (lawmakers) => dispatch(actions.makeLawmakerArray(lawmakers))
+
+  };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
