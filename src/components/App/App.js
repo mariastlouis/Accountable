@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import getLawmaker from '../../helper/helper';
+import getLawmaker from '../../helper/helper';
 import DetailsPage from '../../containers/Details/DetailsPage'
 import { connect } from 'react-redux';
 import {cleanLawmaker} from '../../helper/helper'
@@ -17,14 +17,11 @@ class App extends Component {
   };
 
 componentDidMount = async ()  => {
-    // console.log(this.props)
-
-    // const getLawmaker = async() => {
+ 
   const lawmakerFetch = await fetch(`https://openstates.org/api/v1/legislators/?state=co&apikey=${key}`);
   const lawmakerObject = await lawmakerFetch.json();
-  // return cleanLawmaker(lawmakerObject)
-  // console.log(lawmakerObject)
-  this.props.storeLawmakers(lawmakerObject)
+  const cleanData = await cleanLawmaker(lawmakerObject)
+  this.props.storeLawmakers(cleanData)
 
   };
 
