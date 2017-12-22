@@ -36,7 +36,8 @@ getSelect = () => {
 
   selectLawmaker = async(event, id) => {
   const lawmakerData = await selectNewLawmaker(id);
-  this.props.lawmakerSelect(lawmakerData.id)
+  console.log('lawmakerdata', lawmakerData)
+  this.props.lawmakerSelect(lawmakerData)
 }
 
   render (){
@@ -54,7 +55,7 @@ getSelect = () => {
 };
 
 export const mapDispatchToProps = dispatch => ({
-  lawmakerSelect: id => dispatch(actions.setSelectLawmaker(id))
+  lawmakerSelect: lawmaker => dispatch(actions.setSelectLawmaker(lawmaker))
 
 });
 
