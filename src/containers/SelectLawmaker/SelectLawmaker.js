@@ -8,15 +8,15 @@ import {selectNewLawmaker} from '../../helper/helper'
 export const SelectLawmaker = (props) => {
 
 
-// let lawmaker = props.lawmakers
+let info = props.lawmakers.lawmakers
 
-// const selectOptions = Object.keys(lawmaker).map((dataPoint, index) =>{
-//   return (
-//     <option key = {index} value = {lawmaker[dataPoint].id}>
-//       {`${lawmaker[dataPoint].contact.firstName} ${lawmaker[dataPoint].contact.lastName}`}
-//     </option>
-//   );
-// })
+const selectOptions = Object.keys(info).map((dataPoint, index) =>{
+  return (
+    <option key = {index} value = {info[dataPoint].id}>
+      {`${info[dataPoint].contact.firstName} ${info[dataPoint].contact.lastName}`}
+    </option>
+  );
+})
 
 
 
@@ -32,12 +32,12 @@ const selectLawmaker = async(event, id) =>{
   // props.lawmakerSelect(id)
 }
 
- // {selectOptions}
 
   return (
     <div className="select">
       <select onChange = {(e) => selectLawmaker(e, e.target.value)}>
      
+    {selectOptions}
        
         
       </select>
