@@ -6,15 +6,17 @@ import * as actions from '../../actions/';
 import {selectNewLawmaker} from '../../helper/helper'
 
 export const SelectLawmaker = (props) => {
-let lawmaker = props.lawmakers
 
-const selectOptions = Object.keys(lawmaker).map((dataPoint, index) =>{
-  return (
-    <option key = {index} value = {lawmaker[dataPoint].id}>
-      {`${lawmaker[dataPoint].contact.firstName} ${lawmaker[dataPoint].contact.lastName}`}
-    </option>
-  );
-})
+
+// let lawmaker = props.lawmakers
+
+// const selectOptions = Object.keys(lawmaker).map((dataPoint, index) =>{
+//   return (
+//     <option key = {index} value = {lawmaker[dataPoint].id}>
+//       {`${lawmaker[dataPoint].contact.firstName} ${lawmaker[dataPoint].contact.lastName}`}
+//     </option>
+//   );
+// })
 
 
 
@@ -30,13 +32,13 @@ const selectLawmaker = async(event, id) =>{
   // props.lawmakerSelect(id)
 }
 
-
+ // {selectOptions}
 
   return (
     <div className="select">
       <select onChange = {(e) => selectLawmaker(e, e.target.value)}>
      
-        {selectOptions}
+       
         
       </select>
     </div>
