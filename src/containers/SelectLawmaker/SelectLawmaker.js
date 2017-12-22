@@ -1,48 +1,56 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/';
 import {selectNewLawmaker} from '../../helper/helper'
 
-export const SelectLawmaker = (props) => {
+export class SelectLawmaker extends Component {
+  constructor() {
+    super();
+  }
 
 
-let info = props.lawmakers.lawmakers
-
-const selectOptions = Object.keys(info).map((dataPoint, index) =>{
-  return (
-    <option key = {index} value = {info[dataPoint].id}>
-      {`${info[dataPoint].contact.firstName} ${info[dataPoint].contact.lastName}`}
+getSelect = () => {
+  const toMap = this.props.lawmakers.lawmakers || []
+  return Object.keys(toMap).map((dataPoint, index) => {
+    return (
+     
+    <option key = {index} value = {toMap[dataPoint].id}>
+      {`${toMap[dataPoint].contact.firstName} ${toMap[dataPoint].contact.lastName}`}
     </option>
-  );
-})
-
-
-
-const selectLawmaker = async(event, id) =>{
-
-  const lawmakerData = await selectNewLawmaker(id);
-
-  props.lawmakerSelect(lawmakerData.id)
-  // console.log(lawmakerData)
-
-  // this.props.storeLawmakers(lawmakerData)
-
-  // props.lawmakerSelect(id)
+      
+    )
+  })
 }
 
 
+// selectOptions = Object.keys(info.lawmakers).map((dataPoint, index) =>{
+
+//   return (
+//   );
+
+// });
+
+
+
+  selectLawmaker = async(event, id) => {
+  const lawmakerData = await selectNewLawmaker(id);
+  this.props.lawmakerSelect(lawmakerData.id)
+}
+
+  render (){
   return (
     <div className="select">
-      <select onChange = {(e) => selectLawmaker(e, e.target.value)}>
+      <select onChange = {(e) => this.selectLawmaker(e, e.target.value)}>
      
-    {selectOptions}
-       
+      {this.getSelect()}
         
       </select>
+      
     </div>
   );
+}
 };
 
 export const mapDispatchToProps = dispatch => ({
