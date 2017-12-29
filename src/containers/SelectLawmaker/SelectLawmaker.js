@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/';
 import {selectNewLawmaker} from '../../helper/helper'
+import './SelectLawmaker.css'
+
 
 export class SelectLawmaker extends Component {
   constructor() {
@@ -15,7 +17,8 @@ getSelect = () => {
   const toMap = this.props.lawmakers.lawmakers || []
   return Object.keys(toMap).map((dataPoint, index) => {
     return (
-     
+    
+
     <option key = {index} value = {toMap[dataPoint].id}>
       {`${toMap[dataPoint].contact.firstName} ${toMap[dataPoint].contact.lastName}`}
     </option>
@@ -44,7 +47,7 @@ getSelect = () => {
   return (
     <div className="select">
       <select onChange = {(e) => this.selectLawmaker(e, e.target.value)}>
-     
+      <option> Select a lawmaker </option>
       {this.getSelect()}
         
       </select>
