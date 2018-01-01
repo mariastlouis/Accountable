@@ -1,0 +1,27 @@
+@import url("../../assets/variable.css");
+.Contact {
+  display: flex;
+  flex-direction: row; }
+
+.left-side-info {
+  width: 50%; }
+
+.mugshot-image {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+
+.mugshot {
+  display: inline;
+  margin: 0 auto;
+  width: auto;
+  height: 250px; }
+
+ul {
+  list-style-type: none; }
