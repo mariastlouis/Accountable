@@ -6,7 +6,8 @@ class AddressForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = { 
-      address: 'Denver, CO'              
+      address: 'Denver, CO',
+      selectedLawmakers: []              
      }
     this.onChange = (address) => this.setState({ address })
   }
@@ -17,11 +18,22 @@ class AddressForm extends React.Component {
     const getAddress = await geocodeByAddress(this.state.address)
     const getCoords = await getLatLng(getAddress[0])
     const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
-    const setLawmakers = await mapLawmakers(lawmakerCoords)
+    const setLawmakers = await this.mapLawmakers(lawmakerCoords)
+    this.setState({selectedLawmakers: lawmakerCoords})
+
   })
 
-  const mapLawmakers = (lawmakers) => {
-    return Object.keys(lawmakerCoords).map((lawmaker) =>{})
+  mapLawmakers = (lawmakers) => {
+    if(lawmakers){
+   return Object.keys(lawmakers).map((lawmaker) => {
+      return (
+      <div className = "selectedLawmakers">
+        <h3>{lawmakers[lawmaker].contact.firstName} {lawmakers[lawmaker].contact.lastName} </h3>
+        <img src = {lawmakers[lawmaker].contact.image} />
+      </div>
+    )
+ })
+  }
   }
 
   render() {
@@ -31,10 +43,15 @@ class AddressForm extends React.Component {
     }
 
     return (
+      <div className = 'address-form'>
       <form onSubmit={this.handleFormSubmit}>
         <PlacesAutocomplete inputProps={inputProps} />
         <button type="submit">Submit</button>
       </form>
+        <div>
+          {this.mapLawmakers(this.state.selectedLawmakers)}
+        </div>
+      </div>
     )
   }
 }
