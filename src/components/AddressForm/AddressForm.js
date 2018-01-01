@@ -32,7 +32,7 @@ class AddressForm extends React.Component {
 
   mapLawmakers = (lawmakers) => {
     if(lawmakers){
-   return Object.keys(lawmakers).map((lawmaker) => {
+      return Object.keys(lawmakers).map((lawmaker) => {
      
       return (
       <div className = "selectedLawmakers">
@@ -42,13 +42,11 @@ class AddressForm extends React.Component {
           <Link to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
           Choose lawmaker 
         </Link>
-        </button>
-       
-       
+        </button>   
       </div>
-    )
- })
-  }
+      )
+      })
+    }
   }
 
   render() {
@@ -70,7 +68,6 @@ class AddressForm extends React.Component {
     )
   }
 }
-
 
 
 export const mapDispatchToProps = dispatch => {

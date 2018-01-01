@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/';
 import {selectNewLawmaker} from '../../helper/helper'
 import './SelectLawmaker.css'
+import { withRouter} from 'react-router-dom'
 
 
 export class SelectLawmaker extends Component {
@@ -17,8 +18,6 @@ getSelect = () => {
   const toMap = this.props.lawmakers.lawmakers || []
   return Object.keys(toMap).map((dataPoint, index) => {
     return (
-    
-
     <option key = {index} value = {toMap[dataPoint].id}>
       {`${toMap[dataPoint].contact.firstName} ${toMap[dataPoint].contact.lastName}`}
     </option>
@@ -31,8 +30,8 @@ getSelect = () => {
 
   selectLawmaker = async(event, id) => {
   const lawmakerData = await selectNewLawmaker(id);
-  console.log('lawmakerdata', lawmakerData)
-  this.props.lawmakerSelect(lawmakerData)
+  this.props.lawmakerSelect(lawmakerData);
+  this.props.history.push(`/lawmakers/${id}`);
 }
 
   render (){
@@ -60,4 +59,4 @@ export const mapStateToProps = store => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectLawmaker);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SelectLawmaker))

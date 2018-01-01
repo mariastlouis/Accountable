@@ -34,7 +34,7 @@ componentDidMount = async ()  => {
           const newLawmaker =  lawmakerObject[lawmakerDetail]
          
         
-            return <DetailsPage {...newLawmaker} />
+            return <DetailsPage />
           
 
        }} />
