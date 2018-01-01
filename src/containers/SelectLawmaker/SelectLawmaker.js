@@ -28,14 +28,6 @@ getSelect = () => {
 }
 
 
-// selectOptions = Object.keys(info.lawmakers).map((dataPoint, index) =>{
-
-//   return (
-//   );
-
-// });
-
-
 
   selectLawmaker = async(event, id) => {
   const lawmakerData = await selectNewLawmaker(id);

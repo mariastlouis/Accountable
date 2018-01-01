@@ -2,56 +2,42 @@ import React from 'react';
 import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Committees from '../Committees/Committees'
 
 export const DetailsPage = (props) => {
-let lawmaker = props.lawmakers
+let info = props.lawmakers
+console.log(info)
 
-const mapLawmakers = Object.keys(lawmaker).map((dataPoint, index) =>{
-  return (
-      <Contact 
-        key = {index}
-        id = {lawmaker[dataPoint].id}
-        firstName = {lawmaker[dataPoint].contact.firstName}
-        lastName = {lawmaker[dataPoint].contact.lastName}
-        party = {lawmaker[dataPoint].contact.party}
-        image = {lawmaker[dataPoint].contact.image}
-        website = {lawmaker[dataPoint].contact.website}
-        phone = {lawmaker[dataPoint].contact.phone}
-        occupation = {lawmaker[dataPoint].contact.occupation}
-        district = {lawmaker[dataPoint].contact.district}
-        chamber = {lawmaker[dataPoint].contact.chamber} 
+
+
+const getLawmaker = () => {
+
+  const toMap = props.lawmakers.isSelected.contact || {}
+    return (
+      <div className = "details">
+         <Contact 
+        id = {props.lawmakers.isSelected.id} 
+        firstName = {toMap.firstName}
+        lastName = {toMap.lastName}
+        party = {toMap.party}
+        image = {toMap.image}
+        website = {toMap.website}
+        phone = {toMap.phone}
+        occupation = {toMap.occupation}
+        district = {toMap.district}
+        chamber = {toMap.chamber}
         />
+        <Committees
+          committees = {props.lawmakers.isSelected.committees} />
+      </div>
     )
-})
-
-
-
-// const mapLawmakers = (props) =>{
-//   if (props.lawmakers) {
-//   const mappedContact = Object.keys(props.lawmakers).map((dataPoint) =>{
-//     return (
-//       <Contact 
-//         id = {props.lawmakers[dataPoint].id}
-//         firstName = {props.lawmakers[dataPoint].contact.firstName}
-//         lastName = {props.lawmakers[dataPoint].contact.lastName}
-//         party = {data[dataPoint].contact.party}
-//         image = {data[dataPoint].contact.image}
-//         website = {data[dataPoint].contact.website}
-//         phone = {data[dataPoint].contact.phone}
-//         occupation = {data[dataPoint].contact.occupation}
-//         district = {data[dataPoint].contact.district}
-//         chamber = {data[dataPoint].contact.chamber} 
-//         />
-//     );
-//   });
-//   };
-// }
+}
 
 
 
   return (
     <div className = "details-page">
-      {mapLawmakers}
+     {getLawmaker()}
     </div>
   );
 };

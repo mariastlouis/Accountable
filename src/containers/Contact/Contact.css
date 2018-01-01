@@ -1,10 +1,14 @@
 @import url("../../assets/variable.css");
 .Contact {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  margin: 20px; }
 
 .left-side-info {
   width: 50%; }
+
+.lawmaker-name {
+  text-align: center; }
 
 .mugshot-image {
   width: 150px;
@@ -25,3 +29,9 @@
 
 ul {
   list-style-type: none; }
+
+li {
+  line-height: 20px; }
+
+.right-side-info {
+  margin-top: 30px; }

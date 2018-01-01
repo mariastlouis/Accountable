@@ -1,6 +1,9 @@
 import React from 'react'
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 import {setCoordinates} from '../../helper/helper'
+import { Link, withRouter} from 'react-router-dom'
+import { connect } from 'react-redux';
+import * as actions from '../../actions/';
 
 class AddressForm extends React.Component {
   constructor(props) {
@@ -23,13 +26,25 @@ class AddressForm extends React.Component {
 
   })
 
+  chooseLawmaker = (lawmaker) => {
+    this.props.lawmakerClick(lawmaker)
+  }
+
   mapLawmakers = (lawmakers) => {
     if(lawmakers){
    return Object.keys(lawmakers).map((lawmaker) => {
+     
       return (
       <div className = "selectedLawmakers">
         <h3>{lawmakers[lawmaker].contact.firstName} {lawmakers[lawmaker].contact.lastName} </h3>
-        <img src = {lawmakers[lawmaker].contact.image} />
+        <img src = {lawmakers[lawmaker].contact.image}  />
+        <button onClick = {() => this.chooseLawmaker(lawmakers[lawmaker])}>
+          <Link to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
+          Choose lawmaker 
+        </Link>
+        </button>
+       
+       
       </div>
     )
  })
@@ -39,7 +54,7 @@ class AddressForm extends React.Component {
   render() {
     const inputProps = {
       value: this.state.address,
-      onChange: this.onChange,
+      onChange: this.onChange
     }
 
     return (
@@ -56,4 +71,16 @@ class AddressForm extends React.Component {
   }
 }
 
-export default AddressForm
+
+
+export const mapDispatchToProps = dispatch => {
+  return {
+    lawmakerClick: lawmaker => {
+      dispatch(actions.setClickedLawmaker(lawmaker))
+    }
+   
+  };
+};
+
+
+export default withRouter(connect(null, mapDispatchToProps)(AddressForm));
