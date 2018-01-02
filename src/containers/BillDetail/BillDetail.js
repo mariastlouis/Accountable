@@ -4,20 +4,29 @@ import PropTypes from 'prop-types';
 const BillDetail = ({bills}) => {
 
 const signed = (action) => {
-  console.log(action)
   return action === 'Governor Signed' ? 'Signed by Governor' : null;
+}
+
+const formatDate = (action, date) => {
+  const newDate = new Date(date)
+  const signDay = newDate.getDate();
+  const signMonth = newDate.getUTCMonth()+1;
+  const signYear = newDate.getFullYear();
+  const formattedDate = signMonth + '/' + signDay + '/' + signYear
+
+  return action === 'Governor Signed' ? ' on ' + formattedDate : null
 }
 
 const mapBills = (bills) => {
   if(bills) {
-    console.log(bills)
     const billKeys = Object.keys(bills).map((bill) => {
      
       return (
-        <div> 
-          <li>{bills[bill].billTitleId}</li>
-          <li>{bills[bill].billTitle}</li>
-          <li>{signed(bills[bill].signed.signAction)}</li>
+        <div className = "bill-info"> 
+          <p><strong>{bills[bill].billTitleId}</strong></p>
+          <p>{bills[bill].billTitle}</p>
+          <p><em>{signed(bills[bill].signed.signAction)}
+           {formatDate(bills[bill].signed.signAction, bills[bill].signed.signDate)} </em></p>
         </div>
       )
     });
@@ -29,9 +38,9 @@ const mapBills = (bills) => {
   return (
     <div className = "bill-detail">
       <h2> Sponsored Bills </h2>
-      <ul>
+     
       {mapBills(bills)}
-      </ul>
+     
     </div>
   )
 
