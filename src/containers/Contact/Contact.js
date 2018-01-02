@@ -5,15 +5,9 @@ import './Contact.css'
 
 const Contact = ({id, firstName, lastName, party, image, website, phone, occupation, district, chamber, committees}) => {
   
-
-
-
   const label = (field, label) => {
     return field ? label : null;
   }
-
-
-
   return (
 
     <div className = "Contact">

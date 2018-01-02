@@ -26,17 +26,13 @@ componentDidMount = async ()  => {
 
        <div>
 
-       <Route exact path = '/' component = {Home} />
+      <Route exact path = '/' component = {Home} />
       <Route path = '/lawmakers/:id' render = {({match}) => {
           const lawmakerObject = this.props.lawmakers.lawmakers
           const {id} = match.params
           const lawmakerDetail = Object.keys(lawmakerObject).find(lawmaker => lawmakerObject[lawmaker].id === id)
           const newLawmaker =  lawmakerObject[lawmakerDetail]
-         
-        
             return <DetailsPage />
-          
-
        }} />
 
 

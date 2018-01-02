@@ -43,12 +43,13 @@ export const selectNewLawmaker = async(id) => {
   }
 
 
-const cleanLawmakerSelect = (async(lawmakers) => {
+export const cleanLawmakerSelect = (async(lawmakers) => {
   try {
       const committees = lawmakers.roles;
       const committeePromises = await getCommittees(committees);
       const chamberPromises = await getChamber(lawmakers.chamber);
       const partyPromises = await getParty(lawmakers.party);
+      const billPromises = await getBills(lawmakers.id)
     return {
 
         id: lawmakers.id,
@@ -64,7 +65,8 @@ const cleanLawmakerSelect = (async(lawmakers) => {
           chamber: chamberPromises,
           district: lawmakers.district
         },
-        committees: committeePromises
+        committees: committeePromises,
+        bills: billPromises
         
       }
   } catch (type) {
@@ -112,28 +114,45 @@ return committeeObject.sources[0].url
 
 };
 
+const getBills = async(lawmakerId) =>{
+  const billFetch = await fetch(`https:openstates.org/api/v1/bills/?sponsor_id=${lawmakerId}&page=1&per_page=25&apikey=${key}`)
+  const billObject = await billFetch.json();
+  return cleanBills(billObject);
+};
+
+
+const cleanBills = (bills) => {
+  const unresolvedPromises = Object.keys(bills).map(async(bill) => {
+    const billPromises = await getBillDetail(bills[bill].id)
+    return {
+      billTitle: bills[bill].title,
+      billId: bills[bill].id,
+      signed: billPromises
+    }
+
+  })
+  return Promise.all(unresolvedPromises)
+}
+
+const getBillDetail = async(billId) => {
+  const billFetch = await fetch (`https:openstates.org/api/v1/bills/${billId}/?apikey=${key}`)
+  const billObject = await billFetch.json();
+  
+  return {
+    signAction: billObject.actions[0].action,
+    signDate: billObject.actions[0].date
+  } 
+}
+
+
+
+
 export const setCoordinates = async(latitude, longitude) => {
   const lawmakerFetch = await fetch(`https:openstates.org/api/v1/legislators/geo/?lat=${latitude}&long=${longitude}&apikey=${key}`);
   const lawmakerObject = await lawmakerFetch.json();
-  return cleanLawmakerCoordinates(lawmakerObject)
+  return lawmakerObject
 }
 
-const cleanLawmakerCoordinates = (lawmakers) => {
-  const unresolvedPromises = Object.keys(lawmakers).map(async(lawmaker)=>{
-    return {
-        id: lawmakers[lawmaker].id,
-        contact: {
-          firstName: lawmakers[lawmaker].first_name,
-          lastName: lawmakers[lawmaker].last_name,
-          party: lawmakers[lawmaker].party,
-          image: lawmakers[lawmaker].photo_url,
-          chamber: lawmakers[lawmaker].chamber,
-          district: lawmakers[lawmaker].district
-        }
-    }
-  }) 
-  return Promise.all(unresolvedPromises)
-}
 
 
   

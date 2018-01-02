@@ -1,6 +1,6 @@
 import React from 'react'
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
-import {setCoordinates} from '../../helper/helper'
+import {setCoordinates, cleanLawmakerSelect} from '../../helper/helper'
 import { Link, withRouter} from 'react-router-dom'
 import { connect } from 'react-redux';
 import * as actions from '../../actions/';
@@ -21,32 +21,38 @@ class AddressForm extends React.Component {
     const getAddress = await geocodeByAddress(this.state.address)
     const getCoords = await getLatLng(getAddress[0])
     const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
+    
     const setLawmakers = await this.mapLawmakers(lawmakerCoords)
     this.setState({selectedLawmakers: lawmakerCoords})
 
   })
 
-  chooseLawmaker = (lawmaker) => {
-    this.props.lawmakerClick(lawmaker)
+  chooseLawmaker = async(lawmaker) => {
+    const lawmakerData = await cleanLawmakerSelect(lawmaker);
+    this.props.lawmakerClick(lawmakerData)
   }
 
   mapLawmakers = (lawmakers) => {
+   
     if(lawmakers){
-      return Object.keys(lawmakers).map((lawmaker) => {
-     
-      return (
-      <div className = "selectedLawmakers">
-        <h3>{lawmakers[lawmaker].contact.firstName} {lawmakers[lawmaker].contact.lastName} </h3>
-        <img src = {lawmakers[lawmaker].contact.image}  />
-        <button onClick = {() => this.chooseLawmaker(lawmakers[lawmaker])}>
-          <Link to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
-          Choose lawmaker 
-        </Link>
-        </button>   
-      </div>
-      )
-      })
-    }
+
+    return Object.keys(lawmakers).map((lawmaker) => {
+    
+     return (
+         <div className = "selectedLawmakers">
+            <h3>{lawmakers[lawmaker].first_name} {lawmakers[lawmaker].last_name} </h3>
+                     <img src = {lawmakers[lawmaker].photo_url}  />
+                     <button onClick = {() => this.chooseLawmaker(lawmakers[lawmaker])}>
+                       <Link to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
+                       Choose lawmaker 
+                     </Link>
+                     </button> 
+          
+          
+         </div>
+       ) 
+    })
+  }
   }
 
   render() {
@@ -68,6 +74,7 @@ class AddressForm extends React.Component {
     )
   }
 }
+
 
 
 export const mapDispatchToProps = dispatch => {
