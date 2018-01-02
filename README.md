@@ -8,7 +8,7 @@ This site was created to help voters hold their lawmamkers accountable by knowin
 * React Router
 * Redux 
 * Fetch Async/Await
-* SWAPI Api 
+* Open states API
 * Jest/Enzyme for testing
 
 
