@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+$accent-font: 'Pathway Gothic One', sans-serif;
+
+$body-font: 'Cabin', sans-serif;
+
+$accent-color: #feda4a;
+
+body {
+  font-family: $body-font
+}
+
+h1 {
+  font-size: 20px
+}
+
+h2 {
+  display: block;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
