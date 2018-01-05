@@ -11,10 +11,14 @@ const Contact = ({id, firstName, lastName, party, image, website, phone, occupat
   return (
 
     <div className = "Contact">
-      <div className = "left-side-info">
-        <div className = "lawmaker-name">
-          <h2> {firstName} {lastName} </h2>
-        </div>
+      
+        <h1 className = 'chamber-hed'> {chamber} District {district}</h1>
+     
+      <div className = "main-contact-content">
+        <div className = "left-side-info">
+          <div className = "lawmaker-name">
+            <h2> {firstName} {lastName} </h2>
+          </div>
         <div className = "intro">
           <div className = "mugshot-image">
             <img className = "mugshot" src = {image} alt = {`${firstName} ${lastName}`} />
@@ -31,10 +35,11 @@ const Contact = ({id, firstName, lastName, party, image, website, phone, occupat
         <ul>
           <li> <a href = {website}> {firstName} {lastName}'s Website </a> </li>
           <li> {label(phone, 'Phone:')} {phone} </li>
-          <li> {label(occupation, 'Occuption:')} {occupation} </li>
+          <li> {label(occupation, 'Occupation:')} {occupation} </li>
           <li> {id} </li>
 
         </ul>
+      </div>
       </div>
     </div>
   );

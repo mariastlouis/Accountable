@@ -25,49 +25,24 @@ p {
   font-size: 16px;
   font-family: "Cabin", sans-serif; }
 
-.Contact {
-  margin: 20px; }
+.main-hed {
+  margin-bottom: 20px;
+  margin-top: 20px; }
 
-h1.chamber-hed {
-  background: #3a6985;
+.website-description {
   color: white;
   display: flex;
-  justify-content: center;
-  font-size: 36px;
-  padding: 8px; }
+  align-items: center;
+  background: #3a6985;
+  flex-direction: column; }
 
-.main-contact-content {
+.description-text {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px;
+  font-size: 20px; }
 
-.left-side-info {
-  width: 50%; }
-
-.lawmaker-name {
-  text-align: center; }
-
-.mugshot-image {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  overflow: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
-
-.mugshot {
-  display: inline;
-  margin: 0 auto;
-  width: auto;
-  height: 250px; }
-
-ul {
-  list-style-type: none; }
-
-li {
-  line-height: 20px; }
-
-.right-side-info {
-  margin-top: 30px; }
+.icon {
+  font-size: 30px; }

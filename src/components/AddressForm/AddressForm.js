@@ -1,6 +1,6 @@
 import React from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import {setCoordinates, cleanLawmakerSelect} from '../../helper/helper';
+import {setCoordinates, cleanLawmakerSelect, getChamber, getParty} from '../../helper/helper';
 import { Link, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/';
@@ -44,10 +44,13 @@ class AddressForm extends React.Component {
       console.log(lawmakers[lawmaker])
         return (
           <div className = "selected-lawmakers">
-            <h3>{lawmakers[lawmaker].first_name} {lawmakers[lawmaker].last_name} </h3>
+            <div className = "lawmaker-title">
+              <h3 className = 'upper'> {getChamber(lawmakers[lawmaker].chamber)} District {lawmakers[lawmaker].district}</h3>
+              <h3>{lawmakers[lawmaker].first_name} {lawmakers[lawmaker].last_name} </h3>
+            </div>
             <img className = 'lawmaker-result-image'src = {lawmakers[lawmaker].photo_url}  />
-            <button  onClick = {() => this.chooseLawmaker(lawmakers[lawmaker])}>
-              <Link to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
+            <button className = "get-lawmaker-button" onClick = {() => this.chooseLawmaker(lawmakers[lawmaker])}>
+              <Link className = 'lawmaker-link' to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
                 Learn more
               </Link>
             </button> 
@@ -65,17 +68,15 @@ class AddressForm extends React.Component {
 
     const myStyles = {
     // root: { position: 'absolute' },
-    input: {
-    display: 'inline-block',
-    width: '300px',
-    padding: '10px',
-    ['font-size']: '20px',
-    height: '21px',
-    border: '2px solid #3a6985'
-  },
-    // autocompleteContainer: { backgroundColor: 'green' },
-    // autocompleteItem: { color: 'black' },
-    // autocompleteItemActive: { color: 'blue' }
+      input: {
+      display: 'inline-block',
+      width: '300px',
+      padding: '10px',
+      fontSize: '20px',
+      height: '21px',
+      border: '2px solid #3a6985'
+    }
+    
   }
 
   return (

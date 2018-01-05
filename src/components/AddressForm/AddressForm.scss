@@ -24,7 +24,7 @@ button.submit-button {
 }
 
 button.submit-button:hover{
-  background: #5392b7;
+  background: $button-hover;
 }
 
 .highlight {
@@ -68,4 +68,33 @@ select {
   flex-direction: column;
  padding: 20px;
 
+}
+
+.upper {
+  text-transform: uppercase;
+  font-family: $body-font;
+  margin-bottom: 5px;
+  color: $accent-blue;
+}
+
+.lawmaker-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-bottom: 5px;  
+}
+
+.get-lawmaker-button {
+  background: $accent-blue;
+  height: 40px;
+}
+
+.get-lawmaker-button:hover{
+  background: $button-hover;
+}
+
+.lawmaker-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }

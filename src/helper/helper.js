@@ -38,7 +38,6 @@ const cleanLawmaker = (lawmakers) => {
 export const selectNewLawmaker = async(id) => {
   const selectFetch = await fetch(`https://openstates.org/api/v1/legislators/${id}/?apikey=${key}`);
   const selectObject = await selectFetch.json();
-  // return cleanLawmakerSelect(selectObject)
     return cleanLawmakerSelect(selectObject)
   }
 
@@ -97,11 +96,11 @@ const getCommittees = (committees) => {
 }
 
 
-const getChamber = (chamber) => {
+export const getChamber = (chamber) => {
   return chamber === 'upper' ? 'Senate' : 'House';
 }
 
-const getParty = (party) => {
+export const getParty = (party) => {
     return party === 'Democratic' ? 'Democrat' : party
 };
 
@@ -127,6 +126,7 @@ const cleanBills = (bills) => {
     return {
       billTitle: bills[bill].title,
       billId: bills[bill].id,
+      billTitleId: bills[bill].bill_id,
       signed: billPromises
     }
 
