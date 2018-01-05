@@ -123,10 +123,12 @@ const getBills = async(lawmakerId) =>{
 const cleanBills = (bills) => {
   const unresolvedPromises = Object.keys(bills).map(async(bill) => {
     const billPromises = await getBillDetail(bills[bill].id)
+    
     return {
       billTitle: bills[bill].title,
       billId: bills[bill].id,
       billTitleId: bills[bill].bill_id,
+      session: bills[bill].session,
       signed: billPromises
     }
 

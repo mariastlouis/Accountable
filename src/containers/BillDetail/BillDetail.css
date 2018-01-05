@@ -1,2 +1,75 @@
-.bill-info {
-  width: 50%; }
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600");
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #545252; }
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
+
+h1 {
+  font-size: 40px;
+  font-weight: 400; }
+
+h2 {
+  font-weight: 300;
+  display: block; }
+
+p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333; }
+
+.bill-hed, .check-description {
+  display: flex;
+  justify-content: center; }
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px; }
+
+.card-holder {
+  display: flex;
+  flex-wrap: wrap; }
+
+.card {
+  background: #ffffff;
+  box-shadow: 1.5px 3px 3px 1.5px #566782;
+  margin: 10px;
+  width: 230px;
+  height: 300px; }
+
+.card-hed {
+  background: #3a6985;
+  color: white;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bill-content {
+  margin-left: 10px; }
+
+.check-hed {
+  color: #3a6985; }
+
+.check-paragraph {
+  font-size: 20px;
+  font-weight: 300; }
+
+.check-icon {
+  color: white; }
