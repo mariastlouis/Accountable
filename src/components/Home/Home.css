@@ -25,3 +25,25 @@ p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400; }
+
+.main-hed {
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.website-description {
+  color: white;
+  display: flex;
+  align-items: center;
+  background: #3a6985;
+  flex-direction: column; }
+
+.description-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px;
+  font-size: 20px; }
+
+.icon {
+  font-size: 30px; }

@@ -2,19 +2,24 @@ import React from 'react';
 import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Committees from '../Committees/Committees'
+import Committees from '../Committees/Committees';
+import BillDetail from '../BillDetail/BillDetail';
+import Header from '../Header/Header'
 
 export const DetailsPage = (props) => {
 let info = props.lawmakers
-console.log(info)
-
-
 
 const getLawmaker = () => {
 
   const toMap = props.lawmakers.isSelected.contact || {}
+    
     return (
       <div className = "details">
+
+      <Header />
+      
+      { toMap &&
+
          <Contact 
         id = {props.lawmakers.isSelected.id} 
         firstName = {toMap.firstName}
@@ -27,8 +32,12 @@ const getLawmaker = () => {
         district = {toMap.district}
         chamber = {toMap.chamber}
         />
+
+      }
         <Committees
           committees = {props.lawmakers.isSelected.committees} />
+        <BillDetail 
+          bills = {props.lawmakers.isSelected.bills} />
       </div>
     )
 }

@@ -25,3 +25,18 @@ p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333; }
+
+.committee-hed {
+  display: flex;
+  justify-content: center; }
+
+.committee-info {
+  margin-left: 10%; }
+
+.darker {
+  font-weight: 600; }

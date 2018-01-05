@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+
+
+$accent-font: 'Pathway Gothic One', sans-serif;
+
+$body-font: 'Cabin', sans-serif;
+
+$accent-color: #feda4a;
+
+$accent-red: #941b20;
+$accent-blue: #3a6985;
+$accent-off-white: #e2e4db;
+
+body {
+ 
+  font-family: 'Raleway', sans-serif;
+
+}
+
+h1 {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  display: block;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}

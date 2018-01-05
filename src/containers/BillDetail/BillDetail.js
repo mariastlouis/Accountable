@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './BillDetail.css'
+import Card, { CardActions, CardBlock, CardDivider, CardFooter, CardImage, CardTitle } from 'mineral-ui/Card';
 
 const BillDetail = ({bills}) => {
 
@@ -17,17 +19,25 @@ const formatDate = (action, date) => {
   return action === 'Governor Signed' ? ' on ' + formattedDate : null
 }
 
+
+
+
+
 const mapBills = (bills) => {
   if(bills) {
     const billKeys = Object.keys(bills).map((bill) => {
      
       return (
-        <div className = "bill-info"> 
-          <p><strong>{bills[bill].billTitleId}</strong></p>
-          <p>{bills[bill].billTitle}</p>
-          <p><em>{signed(bills[bill].signed.signAction)}
-           {formatDate(bills[bill].signed.signAction, bills[bill].signed.signDate)} </em></p>
-        </div>
+          <div>
+                           <p><strong>{bills[bill].billTitleId}</strong></p>
+           <p>{bills[bill].billTitle}</p>
+           <p><em>{signed(bills[bill].signed.signAction)}
+            {formatDate(bills[bill].signed.signAction, bills[bill].signed.signDate)} </em></p>   
+            </div>
+
+
+       
+        
       )
     });
     return billKeys;

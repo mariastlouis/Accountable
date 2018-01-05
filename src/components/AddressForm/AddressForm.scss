@@ -1,0 +1,100 @@
+@import '../../assets/variable.scss';
+
+.input-info {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button.submit-button {
+    background: $accent-blue;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    width: 322px;
+}
+
+button.submit-button:hover{
+  background: $button-hover;
+}
+
+.highlight {
+  color: $accent-blue;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+
+.middle-div {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: $accent-blue;
+}
+
+select {
+    width: 250px;
+    font-size: 20px;
+    padding: 30px;
+    height: 50px;
+}
+
+.lawmaker-results {
+  display: flex;
+  flex-direction: row;
+}
+
+.lawmaker-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ img.lawmaker-result-image {
+    height: 250px;
+}
+
+.selected-lawmakers {
+  display: flex;
+  flex-direction: column;
+ padding: 20px;
+
+}
+
+.upper {
+  text-transform: uppercase;
+  font-family: $body-font;
+  margin-bottom: 5px;
+  color: $accent-blue;
+}
+
+.lawmaker-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-bottom: 5px;  
+}
+
+.get-lawmaker-button {
+  background: $accent-blue;
+  height: 40px;
+}
+
+.get-lawmaker-button:hover{
+  background: $button-hover;
+}
+
+.lawmaker-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}

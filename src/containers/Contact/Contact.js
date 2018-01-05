@@ -11,31 +11,25 @@ const Contact = ({id, firstName, lastName, party, image, website, phone, occupat
   return (
 
     <div className = "Contact">
-      <div className = "left-side-info">
-        <div className = "lawmaker-name">
-          <h2> {firstName} {lastName} </h2>
+      <h1 className = 'accent-hed'> {chamber} District {district}</h1>
+     
+      <div className = "main-contact-content">
+        <div className = "left-side-info">
+          <img className = "mugshot" src = {image} alt = {`${firstName} ${lastName}`} />
         </div>
-        <div className = "intro">
-          <div className = "mugshot-image">
-            <img className = "mugshot" src = {image} alt = {`${firstName} ${lastName}`} />
-          </div>
-          <ul>
-
-          <li> {party} </li>
-         
-          <li> {chamber} District {district} </li>
-          </ul>
-        </div>
-      </div>
       <div className = "right-side-info">
-        <ul>
-          <li> <a href = {website}> {firstName} {lastName}'s Website </a> </li>
-          <li> {label(phone, 'Phone:')} {phone} </li>
-          <li> {label(occupation, 'Occuption:')} {occupation} </li>
-          <li> {id} </li>
-
-        </ul>
+        <div className = "lawmaker-name">
+            <h2 className = 'secondary-hed'> {firstName} {lastName} </h2>
+        </div>
+        
+          <p> <span className = "label">{label(party, 'Party:')}</span> {party}</p>
+          <p> <span className = "label"> {label(party, 'Website:')} </span><a href = {website}> {firstName} {lastName}'s Website </a> </p>
+          <p> <span className = "label">{label(phone, 'Phone:')} </span> {phone} </p>
+          <p> <span className = "label">{label(occupation, 'Occupation:')} </span> {occupation} </p>
+         
       </div>
+      </div>
+      <hr />
     </div>
   );
 };

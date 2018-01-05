@@ -1,0 +1,29 @@
+@import '../../assets/variable.scss';
+
+.main-hed {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.website-description {
+ color: white;
+  display: flex;
+  align-items: center; 
+  background:$accent-blue;
+  flex-direction: column;
+
+}
+
+.description-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px;
+  font-size: 20px;
+
+}
+
+.icon {
+  font-size: 30px;
+}

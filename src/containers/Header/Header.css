@@ -25,3 +25,28 @@ p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.nav-bar {
+  margin-top: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.nav {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 300;
+  color: #3a6985;
+  padding: 10px; }
+
+.nav:hover {
+  background: #941b20;
+  color: white; }
