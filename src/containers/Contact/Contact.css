@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
 @import url("https://fonts.googleapis.com/css?family=Cabin");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600");
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #545252; }
 
 h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0px;
@@ -13,22 +15,21 @@ h1, h2, h3 {
 
 h1 {
   font-size: 40px;
-  font-family: 'Raleway', sans-serif;
   font-weight: 400; }
 
 h2 {
-  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   display: block; }
 
 p {
   font-size: 16px;
-  font-family: "Cabin", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
 
 .Contact {
   margin: 20px; }
 
-h1.chamber-hed {
+h1.accent-hed {
   background: #3a6985;
   color: white;
   display: flex;
@@ -37,14 +38,16 @@ h1.chamber-hed {
   padding: 8px; }
 
 .main-contact-content {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row; }
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 20px;
+  width: 80%;
+  justify-content: center; }
 
 .left-side-info {
   width: 50%; }
-
-.lawmaker-name {
-  text-align: center; }
 
 .mugshot-image {
   width: 150px;
@@ -58,9 +61,6 @@ h1.chamber-hed {
   border-radius: 50%; }
 
 .mugshot {
-  display: inline;
-  margin: 0 auto;
-  width: auto;
   height: 250px; }
 
 ul {
@@ -69,5 +69,17 @@ ul {
 li {
   line-height: 20px; }
 
-.right-side-info {
-  margin-top: 30px; }
+p.right-side-info {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.secondary-hed {
+  font-size: 30px;
+  font-weight: 600; }

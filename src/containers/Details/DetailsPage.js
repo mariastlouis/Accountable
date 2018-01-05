@@ -17,6 +17,9 @@ const getLawmaker = () => {
       <div className = "details">
 
       <Header />
+      
+      { toMap &&
+
          <Contact 
         id = {props.lawmakers.isSelected.id} 
         firstName = {toMap.firstName}
@@ -29,6 +32,8 @@ const getLawmaker = () => {
         district = {toMap.district}
         chamber = {toMap.chamber}
         />
+
+      }
         <Committees
           committees = {props.lawmakers.isSelected.committees} />
         <BillDetail 

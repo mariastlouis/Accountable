@@ -5,7 +5,7 @@
 }
 
 
-h1.chamber-hed {
+h1.accent-hed {
     background: $accent-blue;
     color: white;
     display: flex;
@@ -16,18 +16,19 @@ h1.chamber-hed {
 
 
 .main-contact-content {
-  display: flex;
-  flex-direction: row;
-
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 20px;
+    width: 80%;
+    justify-content: center;
 }
 
 .left-side-info {
   width: 50%;
 }
 
-.lawmaker-name{
-  text-align: center;
-}
 
 .mugshot-image {
   width: 150px;
@@ -40,10 +41,8 @@ h1.chamber-hed {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
+
 .mugshot {
-  display: inline;
-  margin: 0 auto;
-  width: auto;
   height: 250px;
 }
 
@@ -55,6 +54,21 @@ li {
   line-height: 20px;
 }
 
-.right-side-info {
-  margin-top: 30px;
+p.right-side-info {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.secondary-hed {
+  font-size: 30px;
+  font-weight: 600;
+}
+

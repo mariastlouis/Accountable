@@ -1,12 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
 @import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
 
 
 $accent-font: 'Raleway', sans-serif;
 
-$body-font: 'Cabin', sans-serif;
+$body-font: 'Open Sans', sans-serif;
 
 $accent-color: #feda4a;
 
@@ -17,12 +19,12 @@ $accent-off-white: #e2e4db;
 $button-hover: #5392b7;
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: $body-font;
   color: #545252;
-
 }
 
 h1, h2, h3 {
+  font-family: $accent-font;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0px;
@@ -31,12 +33,12 @@ h1, h2, h3 {
 
 h1 {
   font-size: 40px;
-  font-family: 'Raleway', sans-serif;
+  // font-family: 'Raleway', sans-serif;
   font-weight: 400;
 }
 
 h2 {
-   font-family: 'Raleway', sans-serif;
+   // font-family: 'Raleway', sans-serif;
    font-weight: 300;
   display: block;
 
@@ -45,5 +47,6 @@ h2 {
 p {
   font-size: 16px;
   font-family: $body-font;
+  font-weight: 400;
 }
 
