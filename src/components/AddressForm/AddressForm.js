@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import {setCoordinates, cleanLawmakerSelect, getChamber, getParty} from '../../helper/helper';
 import { Link, withRouter} from 'react-router-dom';
@@ -7,7 +7,7 @@ import * as actions from '../../actions/';
 import './AddressForm.css';
 import SelectLawmaker from '../../containers/SelectLawmaker/SelectLawmaker'
 
-class AddressForm extends React.Component {
+export class AddressForm extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -17,13 +17,13 @@ class AddressForm extends React.Component {
     this.onChange = (address) => this.setState({ address });
   }
 
-
   handleFormSubmit = (async(event) => {
     event.preventDefault();
+    console.log(this.props)
     const getAddress = await geocodeByAddress(this.state.address);
     const getCoords = await getLatLng(getAddress[0]);
     const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
-    
+
     const setLawmakers = await this.mapLawmakers(lawmakerCoords);
     this.setState({selectedLawmakers: lawmakerCoords});
 
@@ -33,7 +33,6 @@ class AddressForm extends React.Component {
     const lawmakerData = await cleanLawmakerSelect(lawmaker);
     this.props.lawmakerClick(lawmakerData);
     this.setState({address: ''})
-    console.log(this.state)
   }
 
 
@@ -41,7 +40,7 @@ class AddressForm extends React.Component {
   mapLawmakers = (lawmakers) => {
     if (lawmakers){
       return Object.keys(lawmakers).map((lawmaker) => {
-      console.log(lawmakers[lawmaker])
+    
         return (
           <div className = "selected-lawmakers">
             <div className = "lawmaker-title">
@@ -67,7 +66,6 @@ class AddressForm extends React.Component {
     };
 
     const myStyles = {
-    // root: { position: 'absolute' },
       input: {
       display: 'inline-block',
       width: '300px',
