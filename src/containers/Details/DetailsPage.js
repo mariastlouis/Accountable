@@ -7,6 +7,7 @@ import BillDetail from '../BillDetail/BillDetail';
 import Header from '../Header/Header'
 
 export const DetailsPage = (props) => {
+
 let info = props.lawmakers
 
 const getLawmaker = () => {
@@ -51,7 +52,6 @@ const getLawmaker = () => {
   );
 };
 
-// export default DetailsPage;
 
 export const mapStateToProps = store => {
   return {
