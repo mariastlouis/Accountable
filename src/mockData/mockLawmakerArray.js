@@ -1,7 +1,6 @@
 export const mockLawmakerArray = [
 {
   id: 'COL000043',
-  isSelected: false,
   contact: {
     firstName: 'Jon',
     lastName: 'Becker',
@@ -17,7 +16,6 @@ export const mockLawmakerArray = [
   },
   {
   id: 'COL000067',
-  isSelected: false,
   contact: {
     firstName: "Crisanta",
     lastName: 'Duran',
@@ -32,3 +30,5 @@ export const mockLawmakerArray = [
   }
 }
 ]
+
+
