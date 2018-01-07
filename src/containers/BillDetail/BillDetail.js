@@ -32,10 +32,10 @@ const formatDate = (action, date) => {
 const mapBills = (bills) => {
   if(bills) {
    
-    const billKeys = Object.keys(bills).map((bill) => {
+    const billKeys = Object.keys(bills).map((bill, index) => {
    
       return (
-        <div className = "card">
+        <div className = "card" key = {index}>
           <div className = "card-hed">
             <h3> <span className = "check-icon"> {checked(bills[bill].signed.signAction)} </span>
             {bills[bill].billTitleId}  </h3>
@@ -44,7 +44,7 @@ const mapBills = (bills) => {
             
             <p className = "bill-title"> {bills[bill].billTitle}</p>
             <p><span className = "label"> Session: </span> {bills[bill].session}</p>
-            <p><em>{signed(bills[bill].signed.signAction)}
+            <p className = "gov-signature"><em>{signed(bills[bill].signed.signAction)}
               {formatDate(bills[bill].signed.signAction, bills[bill].signed.signDate)} </em></p>   
           </div>
         </div>
@@ -57,7 +57,7 @@ const mapBills = (bills) => {
 
   return (
     <div className = "bill-detail">
-      
+
       <div className = "bill-hed">
         <h2 className = "bill-hed"> Sponsored Bills </h2>
         
