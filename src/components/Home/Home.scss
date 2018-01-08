@@ -27,3 +27,12 @@
 .icon {
   font-size: 30px;
 }
+
+@media screen and (max-width: 580px) {
+  .description-text {
+    flex-direction:column;
+  }
+  .website-description{
+    text-align: center;
+  }
+}

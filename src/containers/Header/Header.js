@@ -12,16 +12,15 @@ const Header = () => {
             <img src = {accountableLogo} alt = 'logo' />
           </Link>
         </div>
-        <div className = 'nav-bar'>
-          <NavLink to = '/lawmakers' className = 'nav'>LAWMAKERS </NavLink>
-          <NavLink to = '/bills' className = 'nav'>BILLS </NavLink>
-          <NavLink to = '/committees' className = 'nav'>COMMITTEES </NavLink>
-        </div>
       </header>
-    
-     
     </div>  
   );
 };
 
 export default Header;
+
+   // <div className = 'nav-bar'>
+   // <NavLink to = '/lawmakers' className = 'nav'>LAWMAKERS </NavLink>
+   // <NavLink to = '/bills' className = 'nav'>BILLS </NavLink>
+   // <NavLink to = '/committees' className = 'nav'>COMMITTEES </NavLink>
+   // </div>

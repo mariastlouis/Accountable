@@ -1,22 +1,21 @@
-// @import url('../../assets/variable.scss');
+
 @import '../../assets/variable.scss';
 
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
 
 .nav-bar {
-    // background: #3a6985;
-    // width: 100%;
-    margin-top: 30px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  margin-top: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .nav {
   text-decoration: none;
@@ -30,3 +29,4 @@ header {
   background: $accent-red;
   color: white;
 }
+
