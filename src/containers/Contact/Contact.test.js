@@ -10,7 +10,6 @@ describe('Contact component tests', () => {
   beforeEach(() => {
     renderedComponent = shallow(
       <Contact 
-        id = {mockLawmakerDetails.id}
         firstName = {mockLawmakerDetails.contact.firstName}
         lastName = {mockLawmakerDetails.contact.lastName}
         party= {mockLawmakerDetails.contact.party}

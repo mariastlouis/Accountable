@@ -62,4 +62,3 @@ export default connect(mapStateToProps, null)(DetailsPage);
 DetailsPage.propTypes = {
   lawmakers: PropTypes.object
 };
-// export default DetailsPage

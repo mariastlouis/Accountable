@@ -31,34 +31,6 @@ ShallowWrapper {
                         />
                 </Link>
         </div>
-        <div
-                className="nav-bar"
-        >
-                <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        className="nav"
-                        to="/lawmakers"
-                >
-                        LAWMAKERS 
-                </NavLink>
-                <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        className="nav"
-                        to="/bills"
-                >
-                        BILLS 
-                </NavLink>
-                <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        className="nav"
-                        to="/committees"
-                >
-                        COMMITTEES 
-                </NavLink>
-        </div>
 </header>,
       "className": "header",
     },
@@ -68,8 +40,101 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
+        "children": <div
+          className="logo"
+>
+          <Link
+                    replace={false}
+                    to="/"
+          >
+                    <img
+                              alt="logo"
+                              src="accountable-logo2-02.png"
+                    />
+          </Link>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            replace={false}
+            to="/"
+>
+            <img
+                        alt="logo"
+                        src="accountable-logo2-02.png"
+            />
+</Link>,
+          "className": "logo",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <img
+              alt="logo"
+              src="accountable-logo2-02.png"
+/>,
+            "replace": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "logo",
+              "src": "accountable-logo2-02.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      "type": "header",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <header>
           <div
+                    className="logo"
+          >
+                    <Link
+                              replace={false}
+                              to="/"
+                    >
+                              <img
+                                        alt="logo"
+                                        src="accountable-logo2-02.png"
+                              />
+                    </Link>
+          </div>
+</header>,
+        "className": "header",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
             className="logo"
 >
             <Link
@@ -82,39 +147,9 @@ ShallowWrapper {
                         />
             </Link>
 </div>,
-          <div
-            className="nav-bar"
->
-            <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        className="nav"
-                        to="/lawmakers"
-            >
-                        LAWMAKERS 
-            </NavLink>
-            <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        className="nav"
-                        to="/bills"
-            >
-                        BILLS 
-            </NavLink>
-            <NavLink
-                        activeClassName="active"
-                        ariaCurrent="true"
-                        className="nav"
-                        to="/committees"
-            >
-                        COMMITTEES 
-            </NavLink>
-</div>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
+        },
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
@@ -160,327 +195,6 @@ ShallowWrapper {
           },
           "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                className="nav"
-                to="/lawmakers"
->
-                LAWMAKERS 
-</NavLink>,
-              <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                className="nav"
-                to="/bills"
->
-                BILLS 
-</NavLink>,
-              <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                className="nav"
-                to="/committees"
->
-                COMMITTEES 
-</NavLink>,
-            ],
-            "className": "nav-bar",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": "LAWMAKERS ",
-                "className": "nav",
-                "to": "/lawmakers",
-              },
-              "ref": null,
-              "rendered": "LAWMAKERS ",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": "BILLS ",
-                "className": "nav",
-                "to": "/bills",
-              },
-              "ref": null,
-              "rendered": "BILLS ",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "ariaCurrent": "true",
-                "children": "COMMITTEES ",
-                "className": "nav",
-                "to": "/committees",
-              },
-              "ref": null,
-              "rendered": "COMMITTEES ",
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "header",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <header>
-          <div
-                    className="logo"
-          >
-                    <Link
-                              replace={false}
-                              to="/"
-                    >
-                              <img
-                                        alt="logo"
-                                        src="accountable-logo2-02.png"
-                              />
-                    </Link>
-          </div>
-          <div
-                    className="nav-bar"
-          >
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              className="nav"
-                              to="/lawmakers"
-                    >
-                              LAWMAKERS 
-                    </NavLink>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              className="nav"
-                              to="/bills"
-                    >
-                              BILLS 
-                    </NavLink>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              className="nav"
-                              to="/committees"
-                    >
-                              COMMITTEES 
-                    </NavLink>
-          </div>
-</header>,
-        "className": "header",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="logo"
->
-              <Link
-                            replace={false}
-                            to="/"
-              >
-                            <img
-                                          alt="logo"
-                                          src="accountable-logo2-02.png"
-                            />
-              </Link>
-</div>,
-            <div
-              className="nav-bar"
->
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="nav"
-                            to="/lawmakers"
-              >
-                            LAWMAKERS 
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="nav"
-                            to="/bills"
-              >
-                            BILLS 
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="nav"
-                            to="/committees"
-              >
-                            COMMITTEES 
-              </NavLink>
-</div>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <Link
-                replace={false}
-                to="/"
->
-                <img
-                                alt="logo"
-                                src="accountable-logo2-02.png"
-                />
-</Link>,
-              "className": "logo",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <img
-                  alt="logo"
-                  src="accountable-logo2-02.png"
-/>,
-                "replace": false,
-                "to": "/",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "logo",
-                  "src": "accountable-logo2-02.png",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-              "type": [Function],
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="nav"
-                  to="/lawmakers"
->
-                  LAWMAKERS 
-</NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="nav"
-                  to="/bills"
->
-                  BILLS 
-</NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="nav"
-                  to="/committees"
->
-                  COMMITTEES 
-</NavLink>,
-              ],
-              "className": "nav-bar",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "LAWMAKERS ",
-                  "className": "nav",
-                  "to": "/lawmakers",
-                },
-                "ref": null,
-                "rendered": "LAWMAKERS ",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "BILLS ",
-                  "className": "nav",
-                  "to": "/bills",
-                },
-                "ref": null,
-                "rendered": "BILLS ",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "COMMITTEES ",
-                  "className": "nav",
-                  "to": "/committees",
-                },
-                "ref": null,
-                "rendered": "COMMITTEES ",
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-        ],
         "type": "header",
       },
       "type": "div",

@@ -53,7 +53,6 @@ ShallowWrapper {
                     <li
                               className="committee-element"
                     >
-                               
                               <span
                                         className="darker"
                               >
@@ -110,7 +109,6 @@ ShallowWrapper {
             <li
                         className="committee-element"
             >
-                         
                         <span
                                     className="darker"
                         >
@@ -140,7 +138,6 @@ ShallowWrapper {
               <li
                 className="committee-element"
 >
-                 
                 <span
                                 className="darker"
                 >
@@ -167,7 +164,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  " ",
                   <span
                     className="darker"
 >
@@ -187,7 +183,6 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -268,7 +263,6 @@ ShallowWrapper {
                         <li
                                     className="committee-element"
                         >
-                                     
                                     <span
                                                 className="darker"
                                     >
@@ -325,7 +319,6 @@ ShallowWrapper {
               <li
                             className="committee-element"
               >
-                             
                             <span
                                           className="darker"
                             >
@@ -355,7 +348,6 @@ ShallowWrapper {
                 <li
                   className="committee-element"
 >
-                   
                   <span
                                     className="darker"
                   >
@@ -382,7 +374,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    " ",
                     <span
                       className="darker"
 >
@@ -402,7 +393,6 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,

@@ -16,23 +16,24 @@ const Contact = ({firstName, lastName, party, image, website, phone, occupation,
      
       <div className = "main-contact-content">
         <div className = "lawmaker-profile">
-        <div className = "left-side-info">
-          <img className = "mugshot" src = {image} alt = {`${firstName} ${lastName}`} />
-        </div>
-        <div className = "right-side-info">
-          <div className = "lawmaker-name">
-            <h2 className = 'secondary-hed'> {firstName} {lastName} </h2>
+          <div className = "left-side-info">
+            <img className = "mugshot" src = {image} alt = {`${firstName} ${lastName}`} />
           </div>
+          <div className = "right-side-info">
+            <div className = "lawmaker-name">
+              <h2 className = 'secondary-hed'> {firstName} {lastName} </h2>
+            </div>
         
-          <p> <span className = "label">{label(party, 'Party:')}</span> {party}</p>
+            <p> <span className = "label">{label(party, 'Party:')}</span> {party}</p>
          
-          <p> <span className = "label"> {label(party, 'Website:')} </span>
-            <a href = {website}> {firstName} {lastName}'s Website </a> </p>
-          <p> <span className = "label">{label(phone, 'Phone:')} </span> {phone} </p>
-          <p> <span className = "label">{label(occupation, 'Occupation:')} </span> {occupation} </p>
+            <p> <span className = "label"> {label(party, 'Website:')} </span>
+              <a href = {website}> {firstName} {lastName}'s Website </a> </p>
+            <p> <span className = "label">{label(phone, 'Phone:')} </span> {phone} </p>
+            <p> <span className = "label">{label(occupation, 'Occupation:')}
+            </span> {occupation} </p>
          
+          </div>
         </div>
-      </div>
       </div>
       <hr />
     </div>
