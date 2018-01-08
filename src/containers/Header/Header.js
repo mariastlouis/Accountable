@@ -1,6 +1,6 @@
 import React from 'react';
 import accountableLogo from '../../assets/images/accountable-logo2-02.png';
-import { NavLink, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -19,8 +19,8 @@ const Header = () => {
 
 export default Header;
 
-   // <div className = 'nav-bar'>
-   // <NavLink to = '/lawmakers' className = 'nav'>LAWMAKERS </NavLink>
-   // <NavLink to = '/bills' className = 'nav'>BILLS </NavLink>
-   // <NavLink to = '/committees' className = 'nav'>COMMITTEES </NavLink>
-   // </div>
+// <div className = 'nav-bar'>
+// <NavLink to = '/lawmakers' className = 'nav'>LAWMAKERS </NavLink>
+// <NavLink to = '/bills' className = 'nav'>BILLS </NavLink>
+// <NavLink to = '/committees' className = 'nav'>COMMITTEES </NavLink>
+// </div>

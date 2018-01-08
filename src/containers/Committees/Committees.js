@@ -15,7 +15,8 @@ const Committees = ({committees}) => {
         if (committees[committee].name !== 'none') {
           return (
             
-              <li className = "committee-element"key = {index}> <span className = "darker">{capitalize(committees[committee].position)} </span>
+            <li className = "committee-element"key = {index}>
+              <span className = "darker">{capitalize(committees[committee].position)} </span>
              of <a href = {committees[committee].website}> {committees[committee].name} </a></li>
           
           );
@@ -32,7 +33,7 @@ const Committees = ({committees}) => {
       </div>
       <div className = "committee-info">
         <ul>
-        {mapCommittee(committees)}
+          {mapCommittee(committees)}
         </ul>
       </div>
       <hr />

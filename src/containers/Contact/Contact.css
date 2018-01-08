@@ -43,15 +43,16 @@ h1.accent-hed {
   padding: 8px; }
 
 .main-contact-content {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 20px;
   justify-content: center; }
 
-.left-side-info {
-  width: 50%; }
+.lawmaker-profile {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px; }
 
 .mugshot-image {
   width: 150px;
@@ -95,7 +96,7 @@ p.right-side-info {
   margin-left: 20px;
   margin-right: 20px; }
 
-@media screen and (max-width: 600px) {
-  .main-contact-content {
+@media screen and (max-width: 800px) {
+  .lawmaker-profile {
     flex-direction: column;
     align-items: center; } }

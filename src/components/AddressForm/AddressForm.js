@@ -81,7 +81,7 @@ export class AddressForm extends Component {
     return (
       <div className = 'address-form'>
         <div className = 'input-info'>
-         <div className = 'input-content'>
+          <div className = 'input-content'>
             <div className = 'left-side'>
               <h2 className = 'highlight'> Enter your address </h2>
               <form onSubmit={this.handleFormSubmit}>
@@ -90,21 +90,21 @@ export class AddressForm extends Component {
 
                   <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} />
                 </div>
-              <div className = "button-class">
-                <button type="submit" className = "submit-button"> Find my lawmakers</button>
-              </div>
-            </form>
-          </div>
+                <div className = "button-class">
+                  <button type="submit" className = "submit-button"> Find my lawmakers</button>
+                </div>
+              </form>
+            </div>
 
-          <div className = "middle-div">
-            <span className = 'big-Or'> OR </span>
-          </div>
-          <div className = "right-div">
-            <h2 className = 'highlight'> Select a lawmaker </h2>
-            <SelectLawmaker />
+            <div className = "middle-div">
+              <span className = 'big-Or'> OR </span>
+            </div>
+            <div className = "right-div">
+              <h2 className = 'highlight'> Select a lawmaker </h2>
+              <SelectLawmaker />
 
           
-          </div>
+            </div>
           </div>
         </div>
 

@@ -15,6 +15,7 @@ const Contact = ({firstName, lastName, party, image, website, phone, occupation,
       <h1 className = 'accent-hed'> {chamber} District {district}</h1>
      
       <div className = "main-contact-content">
+        <div className = "lawmaker-profile">
         <div className = "left-side-info">
           <img className = "mugshot" src = {image} alt = {`${firstName} ${lastName}`} />
         </div>
@@ -31,6 +32,7 @@ const Contact = ({firstName, lastName, party, image, website, phone, occupation,
           <p> <span className = "label">{label(occupation, 'Occupation:')} </span> {occupation} </p>
          
         </div>
+      </div>
       </div>
       <hr />
     </div>
