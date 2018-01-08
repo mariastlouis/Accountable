@@ -38,8 +38,13 @@ hr {
 .website-description {
   color: white;
   display: flex;
+  justify-content: center;
+  background: #3a6985; }
+
+.content-container {
+  width: 70%;
+  display: flex;
   align-items: center;
-  background: #3a6985;
   flex-direction: column; }
 
 .description-text {
@@ -52,3 +57,9 @@ hr {
 
 .icon {
   font-size: 30px; }
+
+@media screen and (max-width: 580px) {
+  .description-text {
+    flex-direction: column; }
+  .website-description {
+    text-align: center; } }

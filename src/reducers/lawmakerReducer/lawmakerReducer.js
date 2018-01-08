@@ -1,27 +1,27 @@
 
 const defaultState = 
   {
-  isSelected: [],
-  lawmakers: []
+    isSelected: [],
+    lawmakers: []
   };
 
 const lawmakerReducer = (state = defaultState, action) =>{
   switch (action.type){
-    case 'MAKE_LAWMAKER_ARRAY':
+  case 'MAKE_LAWMAKER_ARRAY':
 
-  return { ...state,
+    return { ...state,
       isSelected: '',
       lawmakers: action.lawmakers
     };  
   
-    case 'SELECT_LAWMAKER':
+  case 'SELECT_LAWMAKER':
     
     return {
       ...state,
       isSelected:action.lawmaker
     };
 
-    case 'CLICK_LAWMAKER':
+  case 'CLICK_LAWMAKER':
 
     return {
       ...state,

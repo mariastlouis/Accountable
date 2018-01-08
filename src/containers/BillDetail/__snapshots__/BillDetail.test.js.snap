@@ -58,14 +58,13 @@ ShallowWrapper {
           <p
                     className="check-paragraph"
           >
-                     
                     <span
                               className="check-hed"
                     >
                               <FaCheck />
                                
                     </span>
-                     = Bills signed by governor 
+                    = Bills signed by governor 
           </p>
 </div>,
         <div
@@ -209,14 +208,13 @@ ShallowWrapper {
           "children": <p
             className="check-paragraph"
 >
-             
             <span
                         className="check-hed"
             >
                         <FaCheck />
                          
             </span>
-             = Bills signed by governor 
+            = Bills signed by governor 
 </p>,
           "className": "check-description",
         },
@@ -227,20 +225,18 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              " ",
               <span
                 className="check-hed"
 >
                 <FaCheck />
                  
 </span>,
-              " = Bills signed by governor ",
+              "= Bills signed by governor ",
             ],
             "className": "check-paragraph",
           },
           "ref": null,
           "rendered": Array [
-            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -267,7 +263,7 @@ ShallowWrapper {
               ],
               "type": "span",
             },
-            " = Bills signed by governor ",
+            "= Bills signed by governor ",
           ],
           "type": "p",
         },
@@ -1011,14 +1007,13 @@ ShallowWrapper {
             <p
                         className="check-paragraph"
             >
-                         
                         <span
                                     className="check-hed"
                         >
                                     <FaCheck />
                                      
                         </span>
-                         = Bills signed by governor 
+                        = Bills signed by governor 
             </p>
 </div>,
           <div
@@ -1162,14 +1157,13 @@ ShallowWrapper {
             "children": <p
               className="check-paragraph"
 >
-               
               <span
                             className="check-hed"
               >
                             <FaCheck />
                              
               </span>
-               = Bills signed by governor 
+              = Bills signed by governor 
 </p>,
             "className": "check-description",
           },
@@ -1180,20 +1174,18 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                " ",
                 <span
                   className="check-hed"
 >
                   <FaCheck />
                    
 </span>,
-                " = Bills signed by governor ",
+                "= Bills signed by governor ",
               ],
               "className": "check-paragraph",
             },
             "ref": null,
             "rendered": Array [
-              " ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -1220,7 +1212,7 @@ ShallowWrapper {
                 ],
                 "type": "span",
               },
-              " = Bills signed by governor ",
+              "= Bills signed by governor ",
             ],
             "type": "p",
           },

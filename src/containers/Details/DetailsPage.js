@@ -4,51 +4,48 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Committees from '../Committees/Committees';
 import BillDetail from '../BillDetail/BillDetail';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
 
 export const DetailsPage = (props) => {
 
+  const getLawmaker = () => {
 
-let info = props.lawmakers
-
-const getLawmaker = () => {
-
-  const toMap = props.lawmakers.isSelected.contact || {}
+    const toMap = props.lawmakers.isSelected.contact || {};
     
     return (
       <div className = "details">
 
-      <Header />
+        <Header />
       
-      { toMap &&
+        { toMap &&
 
          <Contact 
-        id = {props.lawmakers.isSelected.id} 
-        firstName = {toMap.firstName}
-        lastName = {toMap.lastName}
-        party = {toMap.party}
-        image = {toMap.image}
-        website = {toMap.website}
-        phone = {toMap.phone}
-        occupation = {toMap.occupation}
-        district = {toMap.district}
-        chamber = {toMap.chamber}
-        />
+           id = {props.lawmakers.isSelected.id} 
+           firstName = {toMap.firstName}
+           lastName = {toMap.lastName}
+           party = {toMap.party}
+           image = {toMap.image}
+           website = {toMap.website}
+           phone = {toMap.phone}
+           occupation = {toMap.occupation}
+           district = {toMap.district}
+           chamber = {toMap.chamber}
+         />
 
-      }
+        }
         <Committees
           committees = {props.lawmakers.isSelected.committees} />
         <BillDetail 
           bills = {props.lawmakers.isSelected.bills} />
       </div>
-    )
-}
+    );
+  };
 
 
 
   return (
     <div className = "details-page">
-     {getLawmaker()}
+      {getLawmaker()}
     </div>
   );
 };
@@ -57,8 +54,11 @@ const getLawmaker = () => {
 export const mapStateToProps = store => {
   return {
     lawmakers: store.lawmakers
-  }
+  };
 };
 
 export default connect(mapStateToProps, null)(DetailsPage);
-// export default DetailsPage
+
+DetailsPage.propTypes = {
+  lawmakers: PropTypes.object
+};

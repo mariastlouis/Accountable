@@ -5,6 +5,7 @@
   justify-content: center;
 }
 
+
 .card-container {
   display: flex;
   flex-direction: row;
@@ -52,4 +53,22 @@
 
 .check-icon {
   color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-container {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card-container { 
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .card-container { 
+    width: 250px;
+  }
 }

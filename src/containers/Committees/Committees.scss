@@ -7,9 +7,15 @@
 
 
 .committee-info {
-  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .darker {
   font-weight: 600;
+}
+
+.committee-element {
+  margin-bottom: 15px;
 }

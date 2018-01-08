@@ -8,10 +8,16 @@
 .website-description {
  color: white;
   display: flex;
-  align-items: center; 
+  justify-content: center;
   background:$accent-blue;
-  flex-direction: column;
+  
+}
 
+.content-container {
+  width: 70%;
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
 }
 
 .description-text {
@@ -26,4 +32,13 @@
 
 .icon {
   font-size: 30px;
+}
+
+@media screen and (max-width: 580px) {
+  .description-text {
+    flex-direction:column;
+  }
+  .website-description{
+    text-align: center;
+  }
 }

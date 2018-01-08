@@ -34,10 +34,14 @@ hr {
 .input-info {
   margin-top: 15px;
   display: flex;
-  flex-direction: row;
+  justify-content: center; }
+
+.input-content {
+  width: 70%;
+  display: flex;
   justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px; }
+  flex-direction: column;
+  flex-direction: row; }
 
 form {
   display: flex;
@@ -73,9 +77,8 @@ select {
 
 .lawmaker-results {
   display: flex;
-  flex-direction: row; }
-
-.lawmaker-results {
+  flex-direction: row;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -111,3 +114,12 @@ img.lawmaker-result-image {
   text-decoration: none;
   color: white;
   font-size: 18px; }
+
+@media screen and (max-width: 900px) {
+  .input-content {
+    flex-direction: column;
+    align-items: center; } }
+
+@media screen and (max-width: 450px) {
+  .lawmaker-results {
+    flex-direction: column; } }

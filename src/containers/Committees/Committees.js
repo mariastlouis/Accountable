@@ -1,34 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Committees.css'
+import './Committees.css';
 
 const Committees = ({committees}) => {
 
 
-const capitalize = (string) =>{
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+  const capitalize = (string) =>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
-
-const label = (field, label) => {
-  return field ? label : null;
-}
-
-const mapCommittee = (committees) => {
-  if (committees) {
-    const committeeKeys = Object.keys(committees).map ((committee, index) =>{
-      if (committees[committee].name !== 'none') {
-        return (
-          <div key = {index}>
-            <p> <span className = "darker">{capitalize(committees[committee].position)} </span>
-             of <a href = {committees[committee].website}> {committees[committee].name} </a></p>
-          </div>
-        )
-      }
-    })
-    return committeeKeys 
+  const mapCommittee = (committees) => {
+    if (committees) {
+      const committeeKeys = Object.keys(committees).map((committee, index) =>{
+        if (committees[committee].name !== 'none') {
+          return (
+            
+            <li className = "committee-element"key = {index}>
+              <span className = "darker">{capitalize(committees[committee].position)} </span>
+             of <a href = {committees[committee].website}> {committees[committee].name} </a></li>
+          
+          );
+        }
+      });
+      return committeeKeys; 
     }
-}
+  };
 
   return (
     <div className = "committees">
@@ -36,12 +32,18 @@ const mapCommittee = (committees) => {
         <h2> Committee Assignments </h2>
       </div>
       <div className = "committee-info">
-        {mapCommittee(committees)}
+        <ul>
+          {mapCommittee(committees)}
+        </ul>
       </div>
       <hr />
     </div>
 
-  )
-}  
+  );
+};  
 
 export default Committees;
+
+Committees.propTypes = {
+  committees: PropTypes.array
+};

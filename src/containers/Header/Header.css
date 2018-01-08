@@ -34,7 +34,8 @@ hr {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: center;
+  text-align: center; }
 
 .nav-bar {
   margin-top: 30px;
