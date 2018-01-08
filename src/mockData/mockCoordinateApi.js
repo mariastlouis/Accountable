@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const mockCoordinateApi = [
   {
     "last_name": "Sias",
@@ -231,5 +233,5 @@ export const mockCoordinateApi = [
     ],
     "suffixes": ""
   }
-]
+];
 

@@ -3,8 +3,8 @@ import { mockSelectedLawmaker } from './mockSelectedLawmaker.js';
 
 export const mockStoreData = {
   lawmakers: {
-  isSelected:  mockSelectedLawmaker ,
-  lawmakers:  mockLawmakerArray
+    isSelected:  mockSelectedLawmaker,
+    lawmakers:  mockLawmakerArray
   }
-}
+};
 

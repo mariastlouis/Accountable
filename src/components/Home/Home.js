@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import AddressForm from '../AddressForm/AddressForm';
 import Header from '../../containers/Header/Header';
-import './Home.css'
+import './Home.css';
 import MapMarker from 'react-icons/lib/fa/map-marker';
 import Binoculars from 'react-icons/lib/fa/binoculars';
 import Search from 'react-icons/lib/fa/search';
@@ -24,7 +23,7 @@ const Home = () => {
       
       <AddressForm />
     </div>  
-  )
-}
+  );
+};
 
 export default Home;

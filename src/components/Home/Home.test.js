@@ -2,13 +2,13 @@ import  Home  from './Home.js';
 import React from 'react';
 import { shallow } from 'enzyme';
 
-describe ('Home component tests', () => {
-let renderedComponent;
+describe('Home component tests', () => {
+  let renderedComponent;
 
-beforeEach (() => {
-  renderedComponent = shallow (
-    <Home />);
-});
+  beforeEach(() => {
+    renderedComponent = shallow(
+      <Home />);
+  });
 
   it('should render', () =>{
     expect(renderedComponent).toBeDefined();
