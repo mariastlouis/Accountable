@@ -10,7 +10,7 @@ import AddressForm from '../AddressForm/AddressForm';
 import Home from '../../components/Home/Home';
 
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     

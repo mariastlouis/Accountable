@@ -139,7 +139,6 @@ const cleanBills = (bills) => {
 const getBillDetail = async(billId) => {
   const billFetch = await fetch (`https:openstates.org/api/v1/bills/${billId}/?apikey=${key}`)
   const billObject = await billFetch.json();
-  
   return {
     signAction: billObject.actions[0].action,
     signDate: billObject.actions[0].date

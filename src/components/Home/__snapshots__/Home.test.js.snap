@@ -1,0 +1,727 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component tests should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Header />,
+        <div
+          className="website-description"
+>
+          <h1
+                    className="main-hed"
+          >
+                     Dig deep into Colorado State Politics 
+          </h1>
+          <div
+                    className="description-text"
+          >
+                    <div>
+                               
+                              <span
+                                        className="icon"
+                              >
+                                         
+                                        <FaMapMarker />
+                                         
+                              </span>
+                               Find your state lawmakers
+                    </div>
+                    <div>
+                               
+                              <span
+                                        className="icon"
+                              >
+                                         
+                                        <FaBinoculars />
+                                         
+                              </span>
+                               Track their progress 
+                    </div>
+                    <div>
+                               
+                              <span
+                                        className="icon"
+                              >
+                                         
+                                        <FaSearch />
+                                         
+                              </span>
+                              Search bills and committees 
+                    </div>
+          </div>
+</div>,
+        <withRouter(Connect(AddressForm)) />,
+      ],
+      "className": "home",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="main-hed"
+>
+               Dig deep into Colorado State Politics 
+</h1>,
+            <div
+              className="description-text"
+>
+              <div>
+                             
+                            <span
+                                          className="icon"
+                            >
+                                           
+                                          <FaMapMarker />
+                                           
+                            </span>
+                             Find your state lawmakers
+              </div>
+              <div>
+                             
+                            <span
+                                          className="icon"
+                            >
+                                           
+                                          <FaBinoculars />
+                                           
+                            </span>
+                             Track their progress 
+              </div>
+              <div>
+                             
+                            <span
+                                          className="icon"
+                            >
+                                           
+                                          <FaSearch />
+                                           
+                            </span>
+                            Search bills and committees 
+              </div>
+</div>,
+          ],
+          "className": "website-description",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Dig deep into Colorado State Politics ",
+              "className": "main-hed",
+            },
+            "ref": null,
+            "rendered": " Dig deep into Colorado State Politics ",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div>
+                   
+                  <span
+                                    className="icon"
+                  >
+                                     
+                                    <FaMapMarker />
+                                     
+                  </span>
+                   Find your state lawmakers
+</div>,
+                <div>
+                   
+                  <span
+                                    className="icon"
+                  >
+                                     
+                                    <FaBinoculars />
+                                     
+                  </span>
+                   Track their progress 
+</div>,
+                <div>
+                   
+                  <span
+                                    className="icon"
+                  >
+                                     
+                                    <FaSearch />
+                                     
+                  </span>
+                  Search bills and committees 
+</div>,
+              ],
+              "className": "description-text",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="icon"
+>
+                       
+                      <FaMapMarker />
+                       
+</span>,
+                    " Find your state lawmakers",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        <FaMapMarker />,
+                        " ",
+                      ],
+                      "className": "icon",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      " ",
+                    ],
+                    "type": "span",
+                  },
+                  " Find your state lawmakers",
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="icon"
+>
+                       
+                      <FaBinoculars />
+                       
+</span>,
+                    " Track their progress ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        <FaBinoculars />,
+                        " ",
+                      ],
+                      "className": "icon",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      " ",
+                    ],
+                    "type": "span",
+                  },
+                  " Track their progress ",
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="icon"
+>
+                       
+                      <FaSearch />
+                       
+</span>,
+                    "Search bills and committees ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        <FaSearch />,
+                        " ",
+                      ],
+                      "className": "icon",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      " ",
+                    ],
+                    "type": "span",
+                  },
+                  "Search bills and committees ",
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Header />,
+          <div
+            className="website-description"
+>
+            <h1
+                        className="main-hed"
+            >
+                         Dig deep into Colorado State Politics 
+            </h1>
+            <div
+                        className="description-text"
+            >
+                        <div>
+                                     
+                                    <span
+                                                className="icon"
+                                    >
+                                                 
+                                                <FaMapMarker />
+                                                 
+                                    </span>
+                                     Find your state lawmakers
+                        </div>
+                        <div>
+                                     
+                                    <span
+                                                className="icon"
+                                    >
+                                                 
+                                                <FaBinoculars />
+                                                 
+                                    </span>
+                                     Track their progress 
+                        </div>
+                        <div>
+                                     
+                                    <span
+                                                className="icon"
+                                    >
+                                                 
+                                                <FaSearch />
+                                                 
+                                    </span>
+                                    Search bills and committees 
+                        </div>
+            </div>
+</div>,
+          <withRouter(Connect(AddressForm)) />,
+        ],
+        "className": "home",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="main-hed"
+>
+                 Dig deep into Colorado State Politics 
+</h1>,
+              <div
+                className="description-text"
+>
+                <div>
+                                 
+                                <span
+                                                className="icon"
+                                >
+                                                 
+                                                <FaMapMarker />
+                                                 
+                                </span>
+                                 Find your state lawmakers
+                </div>
+                <div>
+                                 
+                                <span
+                                                className="icon"
+                                >
+                                                 
+                                                <FaBinoculars />
+                                                 
+                                </span>
+                                 Track their progress 
+                </div>
+                <div>
+                                 
+                                <span
+                                                className="icon"
+                                >
+                                                 
+                                                <FaSearch />
+                                                 
+                                </span>
+                                Search bills and committees 
+                </div>
+</div>,
+            ],
+            "className": "website-description",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Dig deep into Colorado State Politics ",
+                "className": "main-hed",
+              },
+              "ref": null,
+              "rendered": " Dig deep into Colorado State Politics ",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                     
+                    <span
+                                        className="icon"
+                    >
+                                         
+                                        <FaMapMarker />
+                                         
+                    </span>
+                     Find your state lawmakers
+</div>,
+                  <div>
+                     
+                    <span
+                                        className="icon"
+                    >
+                                         
+                                        <FaBinoculars />
+                                         
+                    </span>
+                     Track their progress 
+</div>,
+                  <div>
+                     
+                    <span
+                                        className="icon"
+                    >
+                                         
+                                        <FaSearch />
+                                         
+                    </span>
+                    Search bills and committees 
+</div>,
+                ],
+                "className": "description-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      <span
+                        className="icon"
+>
+                         
+                        <FaMapMarker />
+                         
+</span>,
+                      " Find your state lawmakers",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          <FaMapMarker />,
+                          " ",
+                        ],
+                        "className": "icon",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " ",
+                      ],
+                      "type": "span",
+                    },
+                    " Find your state lawmakers",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      <span
+                        className="icon"
+>
+                         
+                        <FaBinoculars />
+                         
+</span>,
+                      " Track their progress ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          <FaBinoculars />,
+                          " ",
+                        ],
+                        "className": "icon",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " ",
+                      ],
+                      "type": "span",
+                    },
+                    " Track their progress ",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      <span
+                        className="icon"
+>
+                         
+                        <FaSearch />
+                         
+</span>,
+                      "Search bills and committees ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          <FaSearch />,
+                          " ",
+                        ],
+                        "className": "icon",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " ",
+                      ],
+                      "type": "span",
+                    },
+                    "Search bills and committees ",
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -10,21 +10,16 @@ const capitalize = (string) =>{
 }
 
 
-const getChamber = (chamber) => {
-  return chamber === 'upper' ? 'Senate' : 'House';
-}
-
-
 const label = (field, label) => {
   return field ? label : null;
 }
 
 const mapCommittee = (committees) => {
   if (committees) {
-    const committeeKeys = Object.keys(committees).map ((committee) =>{
+    const committeeKeys = Object.keys(committees).map ((committee, index) =>{
       if (committees[committee].name !== 'none') {
         return (
-          <div>
+          <div key = {index}>
             <p> <span className = "darker">{capitalize(committees[committee].position)} </span>
              of <a href = {committees[committee].website}> {committees[committee].name} </a></p>
           </div>

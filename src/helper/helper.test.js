@@ -1,5 +1,5 @@
-import getLawmaker from './helper'
-import { mockLawmakerObject, mockLawmakerApiResponse } from '../mockData/mockData.js';
+import { getLawmaker, selectNewLawmaker, setCoordinates }from './helper'
+import { mockLawmakerObject, mockLawmakerApiResponse, mockDetailApiCall, mockLatLongApiCall} from '../mockData/mockApiCallData.js';
 import key from '../key.js'
 
 
@@ -25,6 +25,42 @@ describe('getLawmaker', () =>{
     ];
     await getLawmaker();
     expect(window.fetch).toHaveBeenCalledWith(...expected);
+  });
+
+});
+
+describe('selectNewLawmaker', () =>{ 
+   window.fetch = jest.fn().mockImplementation(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(mockDetailApiCall)
+    })
+  );
+
+    it('should be a function', () =>{
+    expect(selectNewLawmaker).toBeAFunction;
+  });
+
+     it('should render the fetch data', async () => {
+    const fetch = await selectNewLawmaker();
+    expect(typeof fetch).toEqual('object');
+  });
+
+});
+
+describe('setCoordinates', () =>{ 
+  window.fetch = jest.fn().mockImplementation(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(mockLatLongApiCall)
+    })
+  );
+
+  it('should be a function', () =>{
+    expect(setCoordinates).toBeAFunction;
+  });
+
+   it('should render the fetch data', async () => {
+    const fetch = await setCoordinates();
+    expect(typeof fetch).toEqual('object');
   });
 
 });

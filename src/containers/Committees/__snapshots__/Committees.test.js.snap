@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Committee component tests should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Committees
+    committees={
+        Array [
+            Object {
+              "chamber": "upper",
+              "committeeId": "none",
+              "name": "none",
+              "position": "none",
+              "term": "2017-2018",
+              "website": "none",
+            },
+            Object {
+              "chamber": "upper",
+              "committeeId": "COC000219",
+              "name": "Executive Committee of the Legislative Council",
+              "position": "member",
+              "term": "2017-2018",
+              "website": "http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="committee-hed"
+>
+          <h2>
+                     Committee Assignments 
+          </h2>
+</div>,
+        <div
+          className="committee-info"
+>
+          <div>
+                    <p>
+                               
+                              <span
+                                        className="darker"
+                              >
+                                        Member
+                                         
+                              </span>
+                              of 
+                              <a
+                                        href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                              >
+                                         
+                                        Executive Committee of the Legislative Council
+                                         
+                              </a>
+                    </p>
+          </div>
+</div>,
+        <hr />,
+      ],
+      "className": "committees",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h2>
+             Committee Assignments 
+</h2>,
+          "className": "committee-hed",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Committee Assignments ",
+          },
+          "ref": null,
+          "rendered": " Committee Assignments ",
+          "type": "h2",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            <div>
+              <p>
+                             
+                            <span
+                                          className="darker"
+                            >
+                                          Member
+                                           
+                            </span>
+                            of 
+                            <a
+                                          href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                            >
+                                           
+                                          Executive Committee of the Legislative Council
+                                           
+                            </a>
+              </p>
+</div>,
+          ],
+          "className": "committee-info",
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": <p>
+                 
+                <span
+                                className="darker"
+                >
+                                Member
+                                 
+                </span>
+                of 
+                <a
+                                href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                >
+                                 
+                                Executive Committee of the Legislative Council
+                                 
+                </a>
+</p>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="darker"
+>
+                    Member
+                     
+</span>,
+                  "of ",
+                  <a
+                    href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+>
+                     
+                    Executive Committee of the Legislative Council
+                     
+</a>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Member",
+                      " ",
+                    ],
+                    "className": "darker",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Member",
+                    " ",
+                  ],
+                  "type": "span",
+                },
+                "of ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Executive Committee of the Legislative Council",
+                      " ",
+                    ],
+                    "href": "http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Executive Committee of the Legislative Council",
+                    " ",
+                  ],
+                  "type": "a",
+                },
+              ],
+              "type": "p",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="committee-hed"
+>
+            <h2>
+                         Committee Assignments 
+            </h2>
+</div>,
+          <div
+            className="committee-info"
+>
+            <div>
+                        <p>
+                                     
+                                    <span
+                                                className="darker"
+                                    >
+                                                Member
+                                                 
+                                    </span>
+                                    of 
+                                    <a
+                                                href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                                    >
+                                                 
+                                                Executive Committee of the Legislative Council
+                                                 
+                                    </a>
+                        </p>
+            </div>
+</div>,
+          <hr />,
+        ],
+        "className": "committees",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <h2>
+               Committee Assignments 
+</h2>,
+            "className": "committee-hed",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Committee Assignments ",
+            },
+            "ref": null,
+            "rendered": " Committee Assignments ",
+            "type": "h2",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              <div>
+                <p>
+                                 
+                                <span
+                                                className="darker"
+                                >
+                                                Member
+                                                 
+                                </span>
+                                of 
+                                <a
+                                                href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                                >
+                                                 
+                                                Executive Committee of the Legislative Council
+                                                 
+                                </a>
+                </p>
+</div>,
+            ],
+            "className": "committee-info",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                   
+                  <span
+                                    className="darker"
+                  >
+                                    Member
+                                     
+                  </span>
+                  of 
+                  <a
+                                    href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                  >
+                                     
+                                    Executive Committee of the Legislative Council
+                                     
+                  </a>
+</p>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="darker"
+>
+                      Member
+                       
+</span>,
+                    "of ",
+                    <a
+                      href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+>
+                       
+                      Executive Committee of the Legislative Council
+                       
+</a>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Member",
+                        " ",
+                      ],
+                      "className": "darker",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Member",
+                      " ",
+                    ],
+                    "type": "span",
+                  },
+                  "of ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        "Executive Committee of the Legislative Council",
+                        " ",
+                      ],
+                      "href": "http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      "Executive Committee of the Legislative Council",
+                      " ",
+                    ],
+                    "type": "a",
+                  },
+                ],
+                "type": "p",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

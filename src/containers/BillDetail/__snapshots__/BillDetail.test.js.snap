@@ -1,0 +1,1954 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bill Detail component tests should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BillDetail
+    bills={
+        Array [
+            Object {
+              "billId": "COB00005158",
+              "billTitle": "Taxation Of Retail Marijuana Sales",
+              "billTitleId": "SB 17B-001",
+              "session": "2017B",
+              "signed": Object {
+                "signAction": "Senate Committee on Transportation Postpone Indefinitely",
+                "signDate": "2017-10-02 06:00:00",
+              },
+            },
+            Object {
+              "billId": "COB00004620",
+              "billTitle": "Domestic Violence Fatality Review Board",
+              "billTitleId": "SB 17-126",
+              "session": "2017A",
+              "signed": Object {
+                "signAction": "Governor Signed",
+                "signDate": "2017-06-08 06:00:00",
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="bill-hed"
+>
+          <h2
+                    className="bill-hed"
+          >
+                     Sponsored Bills 
+          </h2>
+</div>,
+        <div
+          className="check-description"
+>
+          <p
+                    className="check-paragraph"
+          >
+                     
+                    <span
+                              className="check-hed"
+                    >
+                              <FaCheck />
+                               
+                    </span>
+                     = Bills signed by governor 
+          </p>
+</div>,
+        <div
+          className="card-container"
+>
+          <div
+                    className="card-holder"
+          >
+                    <div
+                              className="card"
+                    >
+                              <div
+                                        className="card-hed"
+                              >
+                                        <h3>
+                                                   
+                                                  <span
+                                                            className="check-icon"
+                                                  >
+                                                             
+                                                             
+                                                  </span>
+                                                  SB 17B-001
+                                                    
+                                        </h3>
+                              </div>
+                              <div
+                                        className="bill-content"
+                              >
+                                        <p
+                                                  className="bill-title"
+                                        >
+                                                   
+                                                  Taxation Of Retail Marijuana Sales
+                                        </p>
+                                        <p>
+                                                  <span
+                                                            className="label"
+                                                  >
+                                                             Session: 
+                                                  </span>
+                                                   
+                                                  2017B
+                                        </p>
+                                        <p
+                                                  className="gov-signature"
+                                        >
+                                                  <em>
+                                                             
+                                                  </em>
+                                        </p>
+                              </div>
+                    </div>
+                    <div
+                              className="card"
+                    >
+                              <div
+                                        className="card-hed"
+                              >
+                                        <h3>
+                                                   
+                                                  <span
+                                                            className="check-icon"
+                                                  >
+                                                             
+                                                            <FaCheck />
+                                                             
+                                                  </span>
+                                                  SB 17-126
+                                                    
+                                        </h3>
+                              </div>
+                              <div
+                                        className="bill-content"
+                              >
+                                        <p
+                                                  className="bill-title"
+                                        >
+                                                   
+                                                  Domestic Violence Fatality Review Board
+                                        </p>
+                                        <p>
+                                                  <span
+                                                            className="label"
+                                                  >
+                                                             Session: 
+                                                  </span>
+                                                   
+                                                  2017A
+                                        </p>
+                                        <p
+                                                  className="gov-signature"
+                                        >
+                                                  <em>
+                                                            Signed by Governor
+                                                             on 6/8/2017
+                                                             
+                                                  </em>
+                                        </p>
+                              </div>
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "bill-detail",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h2
+            className="bill-hed"
+>
+             Sponsored Bills 
+</h2>,
+          "className": "bill-hed",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Sponsored Bills ",
+            "className": "bill-hed",
+          },
+          "ref": null,
+          "rendered": " Sponsored Bills ",
+          "type": "h2",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="check-paragraph"
+>
+             
+            <span
+                        className="check-hed"
+            >
+                        <FaCheck />
+                         
+            </span>
+             = Bills signed by governor 
+</p>,
+          "className": "check-description",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              <span
+                className="check-hed"
+>
+                <FaCheck />
+                 
+</span>,
+              " = Bills signed by governor ",
+            ],
+            "className": "check-paragraph",
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <FaCheck />,
+                  " ",
+                ],
+                "className": "check-hed",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " ",
+              ],
+              "type": "span",
+            },
+            " = Bills signed by governor ",
+          ],
+          "type": "p",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="card-holder"
+>
+            <div
+                        className="card"
+            >
+                        <div
+                                    className="card-hed"
+                        >
+                                    <h3>
+                                                 
+                                                <span
+                                                            className="check-icon"
+                                                >
+                                                             
+                                                             
+                                                </span>
+                                                SB 17B-001
+                                                  
+                                    </h3>
+                        </div>
+                        <div
+                                    className="bill-content"
+                        >
+                                    <p
+                                                className="bill-title"
+                                    >
+                                                 
+                                                Taxation Of Retail Marijuana Sales
+                                    </p>
+                                    <p>
+                                                <span
+                                                            className="label"
+                                                >
+                                                             Session: 
+                                                </span>
+                                                 
+                                                2017B
+                                    </p>
+                                    <p
+                                                className="gov-signature"
+                                    >
+                                                <em>
+                                                             
+                                                </em>
+                                    </p>
+                        </div>
+            </div>
+            <div
+                        className="card"
+            >
+                        <div
+                                    className="card-hed"
+                        >
+                                    <h3>
+                                                 
+                                                <span
+                                                            className="check-icon"
+                                                >
+                                                             
+                                                            <FaCheck />
+                                                             
+                                                </span>
+                                                SB 17-126
+                                                  
+                                    </h3>
+                        </div>
+                        <div
+                                    className="bill-content"
+                        >
+                                    <p
+                                                className="bill-title"
+                                    >
+                                                 
+                                                Domestic Violence Fatality Review Board
+                                    </p>
+                                    <p>
+                                                <span
+                                                            className="label"
+                                                >
+                                                             Session: 
+                                                </span>
+                                                 
+                                                2017A
+                                    </p>
+                                    <p
+                                                className="gov-signature"
+                                    >
+                                                <em>
+                                                            Signed by Governor
+                                                             on 6/8/2017
+                                                             
+                                                </em>
+                                    </p>
+                        </div>
+            </div>
+</div>,
+          "className": "card-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="card"
+>
+                <div
+                                className="card-hed"
+                >
+                                <h3>
+                                                 
+                                                <span
+                                                                className="check-icon"
+                                                >
+                                                                 
+                                                                 
+                                                </span>
+                                                SB 17B-001
+                                                  
+                                </h3>
+                </div>
+                <div
+                                className="bill-content"
+                >
+                                <p
+                                                className="bill-title"
+                                >
+                                                 
+                                                Taxation Of Retail Marijuana Sales
+                                </p>
+                                <p>
+                                                <span
+                                                                className="label"
+                                                >
+                                                                 Session: 
+                                                </span>
+                                                 
+                                                2017B
+                                </p>
+                                <p
+                                                className="gov-signature"
+                                >
+                                                <em>
+                                                                 
+                                                </em>
+                                </p>
+                </div>
+</div>,
+              <div
+                className="card"
+>
+                <div
+                                className="card-hed"
+                >
+                                <h3>
+                                                 
+                                                <span
+                                                                className="check-icon"
+                                                >
+                                                                 
+                                                                <FaCheck />
+                                                                 
+                                                </span>
+                                                SB 17-126
+                                                  
+                                </h3>
+                </div>
+                <div
+                                className="bill-content"
+                >
+                                <p
+                                                className="bill-title"
+                                >
+                                                 
+                                                Domestic Violence Fatality Review Board
+                                </p>
+                                <p>
+                                                <span
+                                                                className="label"
+                                                >
+                                                                 Session: 
+                                                </span>
+                                                 
+                                                2017A
+                                </p>
+                                <p
+                                                className="gov-signature"
+                                >
+                                                <em>
+                                                                Signed by Governor
+                                                                 on 6/8/2017
+                                                                 
+                                                </em>
+                                </p>
+                </div>
+</div>,
+            ],
+            "className": "card-holder",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="card-hed"
+>
+                    <h3>
+                                         
+                                        <span
+                                                            className="check-icon"
+                                        >
+                                                             
+                                                             
+                                        </span>
+                                        SB 17B-001
+                                          
+                    </h3>
+</div>,
+                  <div
+                    className="bill-content"
+>
+                    <p
+                                        className="bill-title"
+                    >
+                                         
+                                        Taxation Of Retail Marijuana Sales
+                    </p>
+                    <p>
+                                        <span
+                                                            className="label"
+                                        >
+                                                             Session: 
+                                        </span>
+                                         
+                                        2017B
+                    </p>
+                    <p
+                                        className="gov-signature"
+                    >
+                                        <em>
+                                                             
+                                        </em>
+                    </p>
+</div>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h3>
+                       
+                      <span
+                                            className="check-icon"
+                      >
+                                             
+                                             
+                      </span>
+                      SB 17B-001
+                        
+</h3>,
+                    "className": "card-hed",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        <span
+                          className="check-icon"
+>
+                           
+                           
+</span>,
+                        "SB 17B-001",
+                        "  ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            null,
+                            " ",
+                          ],
+                          "className": "check-icon",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          null,
+                          " ",
+                        ],
+                        "type": "span",
+                      },
+                      "SB 17B-001",
+                      "  ",
+                    ],
+                    "type": "h3",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="bill-title"
+>
+                         
+                        Taxation Of Retail Marijuana Sales
+</p>,
+                      <p>
+                        <span
+                                                className="label"
+                        >
+                                                 Session: 
+                        </span>
+                         
+                        2017B
+</p>,
+                      <p
+                        className="gov-signature"
+>
+                        <em>
+                                                 
+                        </em>
+</p>,
+                    ],
+                    "className": "bill-content",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          "Taxation Of Retail Marijuana Sales",
+                        ],
+                        "className": "bill-title",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        "Taxation Of Retail Marijuana Sales",
+                      ],
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <span
+                            className="label"
+>
+                             Session: 
+</span>,
+                          " ",
+                          "2017B",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": " Session: ",
+                            "className": "label",
+                          },
+                          "ref": null,
+                          "rendered": " Session: ",
+                          "type": "span",
+                        },
+                        " ",
+                        "2017B",
+                      ],
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <em>
+                           
+</em>,
+                        "className": "gov-signature",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            null,
+                            null,
+                            " ",
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          null,
+                          null,
+                          " ",
+                        ],
+                        "type": "em",
+                      },
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="card-hed"
+>
+                    <h3>
+                                         
+                                        <span
+                                                            className="check-icon"
+                                        >
+                                                             
+                                                            <FaCheck />
+                                                             
+                                        </span>
+                                        SB 17-126
+                                          
+                    </h3>
+</div>,
+                  <div
+                    className="bill-content"
+>
+                    <p
+                                        className="bill-title"
+                    >
+                                         
+                                        Domestic Violence Fatality Review Board
+                    </p>
+                    <p>
+                                        <span
+                                                            className="label"
+                                        >
+                                                             Session: 
+                                        </span>
+                                         
+                                        2017A
+                    </p>
+                    <p
+                                        className="gov-signature"
+                    >
+                                        <em>
+                                                            Signed by Governor
+                                                             on 6/8/2017
+                                                             
+                                        </em>
+                    </p>
+</div>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h3>
+                       
+                      <span
+                                            className="check-icon"
+                      >
+                                             
+                                            <FaCheck />
+                                             
+                      </span>
+                      SB 17-126
+                        
+</h3>,
+                    "className": "card-hed",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        <span
+                          className="check-icon"
+>
+                           
+                          <FaCheck />
+                           
+</span>,
+                        "SB 17-126",
+                        "  ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            <FaCheck />,
+                            " ",
+                          ],
+                          "className": "check-icon",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {},
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          " ",
+                        ],
+                        "type": "span",
+                      },
+                      "SB 17-126",
+                      "  ",
+                    ],
+                    "type": "h3",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="bill-title"
+>
+                         
+                        Domestic Violence Fatality Review Board
+</p>,
+                      <p>
+                        <span
+                                                className="label"
+                        >
+                                                 Session: 
+                        </span>
+                         
+                        2017A
+</p>,
+                      <p
+                        className="gov-signature"
+>
+                        <em>
+                                                Signed by Governor
+                                                 on 6/8/2017
+                                                 
+                        </em>
+</p>,
+                    ],
+                    "className": "bill-content",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          "Domestic Violence Fatality Review Board",
+                        ],
+                        "className": "bill-title",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        "Domestic Violence Fatality Review Board",
+                      ],
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <span
+                            className="label"
+>
+                             Session: 
+</span>,
+                          " ",
+                          "2017A",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": " Session: ",
+                            "className": "label",
+                          },
+                          "ref": null,
+                          "rendered": " Session: ",
+                          "type": "span",
+                        },
+                        " ",
+                        "2017A",
+                      ],
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <em>
+                          Signed by Governor
+                           on 6/8/2017
+                           
+</em>,
+                        "className": "gov-signature",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Signed by Governor",
+                            " on 6/8/2017",
+                            " ",
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Signed by Governor",
+                          " on 6/8/2017",
+                          " ",
+                        ],
+                        "type": "em",
+                      },
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="bill-hed"
+>
+            <h2
+                        className="bill-hed"
+            >
+                         Sponsored Bills 
+            </h2>
+</div>,
+          <div
+            className="check-description"
+>
+            <p
+                        className="check-paragraph"
+            >
+                         
+                        <span
+                                    className="check-hed"
+                        >
+                                    <FaCheck />
+                                     
+                        </span>
+                         = Bills signed by governor 
+            </p>
+</div>,
+          <div
+            className="card-container"
+>
+            <div
+                        className="card-holder"
+            >
+                        <div
+                                    className="card"
+                        >
+                                    <div
+                                                className="card-hed"
+                                    >
+                                                <h3>
+                                                             
+                                                            <span
+                                                                        className="check-icon"
+                                                            >
+                                                                         
+                                                                         
+                                                            </span>
+                                                            SB 17B-001
+                                                              
+                                                </h3>
+                                    </div>
+                                    <div
+                                                className="bill-content"
+                                    >
+                                                <p
+                                                            className="bill-title"
+                                                >
+                                                             
+                                                            Taxation Of Retail Marijuana Sales
+                                                </p>
+                                                <p>
+                                                            <span
+                                                                        className="label"
+                                                            >
+                                                                         Session: 
+                                                            </span>
+                                                             
+                                                            2017B
+                                                </p>
+                                                <p
+                                                            className="gov-signature"
+                                                >
+                                                            <em>
+                                                                         
+                                                            </em>
+                                                </p>
+                                    </div>
+                        </div>
+                        <div
+                                    className="card"
+                        >
+                                    <div
+                                                className="card-hed"
+                                    >
+                                                <h3>
+                                                             
+                                                            <span
+                                                                        className="check-icon"
+                                                            >
+                                                                         
+                                                                        <FaCheck />
+                                                                         
+                                                            </span>
+                                                            SB 17-126
+                                                              
+                                                </h3>
+                                    </div>
+                                    <div
+                                                className="bill-content"
+                                    >
+                                                <p
+                                                            className="bill-title"
+                                                >
+                                                             
+                                                            Domestic Violence Fatality Review Board
+                                                </p>
+                                                <p>
+                                                            <span
+                                                                        className="label"
+                                                            >
+                                                                         Session: 
+                                                            </span>
+                                                             
+                                                            2017A
+                                                </p>
+                                                <p
+                                                            className="gov-signature"
+                                                >
+                                                            <em>
+                                                                        Signed by Governor
+                                                                         on 6/8/2017
+                                                                         
+                                                            </em>
+                                                </p>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "bill-detail",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <h2
+              className="bill-hed"
+>
+               Sponsored Bills 
+</h2>,
+            "className": "bill-hed",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Sponsored Bills ",
+              "className": "bill-hed",
+            },
+            "ref": null,
+            "rendered": " Sponsored Bills ",
+            "type": "h2",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="check-paragraph"
+>
+               
+              <span
+                            className="check-hed"
+              >
+                            <FaCheck />
+                             
+              </span>
+               = Bills signed by governor 
+</p>,
+            "className": "check-description",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                <span
+                  className="check-hed"
+>
+                  <FaCheck />
+                   
+</span>,
+                " = Bills signed by governor ",
+              ],
+              "className": "check-paragraph",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <FaCheck />,
+                    " ",
+                  ],
+                  "className": "check-hed",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  " ",
+                ],
+                "type": "span",
+              },
+              " = Bills signed by governor ",
+            ],
+            "type": "p",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="card-holder"
+>
+              <div
+                            className="card"
+              >
+                            <div
+                                          className="card-hed"
+                            >
+                                          <h3>
+                                                         
+                                                        <span
+                                                                      className="check-icon"
+                                                        >
+                                                                       
+                                                                       
+                                                        </span>
+                                                        SB 17B-001
+                                                          
+                                          </h3>
+                            </div>
+                            <div
+                                          className="bill-content"
+                            >
+                                          <p
+                                                        className="bill-title"
+                                          >
+                                                         
+                                                        Taxation Of Retail Marijuana Sales
+                                          </p>
+                                          <p>
+                                                        <span
+                                                                      className="label"
+                                                        >
+                                                                       Session: 
+                                                        </span>
+                                                         
+                                                        2017B
+                                          </p>
+                                          <p
+                                                        className="gov-signature"
+                                          >
+                                                        <em>
+                                                                       
+                                                        </em>
+                                          </p>
+                            </div>
+              </div>
+              <div
+                            className="card"
+              >
+                            <div
+                                          className="card-hed"
+                            >
+                                          <h3>
+                                                         
+                                                        <span
+                                                                      className="check-icon"
+                                                        >
+                                                                       
+                                                                      <FaCheck />
+                                                                       
+                                                        </span>
+                                                        SB 17-126
+                                                          
+                                          </h3>
+                            </div>
+                            <div
+                                          className="bill-content"
+                            >
+                                          <p
+                                                        className="bill-title"
+                                          >
+                                                         
+                                                        Domestic Violence Fatality Review Board
+                                          </p>
+                                          <p>
+                                                        <span
+                                                                      className="label"
+                                                        >
+                                                                       Session: 
+                                                        </span>
+                                                         
+                                                        2017A
+                                          </p>
+                                          <p
+                                                        className="gov-signature"
+                                          >
+                                                        <em>
+                                                                      Signed by Governor
+                                                                       on 6/8/2017
+                                                                       
+                                                        </em>
+                                          </p>
+                            </div>
+              </div>
+</div>,
+            "className": "card-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="card"
+>
+                  <div
+                                    className="card-hed"
+                  >
+                                    <h3>
+                                                       
+                                                      <span
+                                                                        className="check-icon"
+                                                      >
+                                                                         
+                                                                         
+                                                      </span>
+                                                      SB 17B-001
+                                                        
+                                    </h3>
+                  </div>
+                  <div
+                                    className="bill-content"
+                  >
+                                    <p
+                                                      className="bill-title"
+                                    >
+                                                       
+                                                      Taxation Of Retail Marijuana Sales
+                                    </p>
+                                    <p>
+                                                      <span
+                                                                        className="label"
+                                                      >
+                                                                         Session: 
+                                                      </span>
+                                                       
+                                                      2017B
+                                    </p>
+                                    <p
+                                                      className="gov-signature"
+                                    >
+                                                      <em>
+                                                                         
+                                                      </em>
+                                    </p>
+                  </div>
+</div>,
+                <div
+                  className="card"
+>
+                  <div
+                                    className="card-hed"
+                  >
+                                    <h3>
+                                                       
+                                                      <span
+                                                                        className="check-icon"
+                                                      >
+                                                                         
+                                                                        <FaCheck />
+                                                                         
+                                                      </span>
+                                                      SB 17-126
+                                                        
+                                    </h3>
+                  </div>
+                  <div
+                                    className="bill-content"
+                  >
+                                    <p
+                                                      className="bill-title"
+                                    >
+                                                       
+                                                      Domestic Violence Fatality Review Board
+                                    </p>
+                                    <p>
+                                                      <span
+                                                                        className="label"
+                                                      >
+                                                                         Session: 
+                                                      </span>
+                                                       
+                                                      2017A
+                                    </p>
+                                    <p
+                                                      className="gov-signature"
+                                    >
+                                                      <em>
+                                                                        Signed by Governor
+                                                                         on 6/8/2017
+                                                                         
+                                                      </em>
+                                    </p>
+                  </div>
+</div>,
+              ],
+              "className": "card-holder",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="card-hed"
+>
+                      <h3>
+                                             
+                                            <span
+                                                                  className="check-icon"
+                                            >
+                                                                   
+                                                                   
+                                            </span>
+                                            SB 17B-001
+                                              
+                      </h3>
+</div>,
+                    <div
+                      className="bill-content"
+>
+                      <p
+                                            className="bill-title"
+                      >
+                                             
+                                            Taxation Of Retail Marijuana Sales
+                      </p>
+                      <p>
+                                            <span
+                                                                  className="label"
+                                            >
+                                                                   Session: 
+                                            </span>
+                                             
+                                            2017B
+                      </p>
+                      <p
+                                            className="gov-signature"
+                      >
+                                            <em>
+                                                                   
+                                            </em>
+                      </p>
+</div>,
+                  ],
+                  "className": "card",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h3>
+                         
+                        <span
+                                                className="check-icon"
+                        >
+                                                 
+                                                 
+                        </span>
+                        SB 17B-001
+                          
+</h3>,
+                      "className": "card-hed",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          <span
+                            className="check-icon"
+>
+                             
+                             
+</span>,
+                          "SB 17B-001",
+                          "  ",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              " ",
+                              null,
+                              " ",
+                            ],
+                            "className": "check-icon",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            " ",
+                            null,
+                            " ",
+                          ],
+                          "type": "span",
+                        },
+                        "SB 17B-001",
+                        "  ",
+                      ],
+                      "type": "h3",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p
+                          className="bill-title"
+>
+                           
+                          Taxation Of Retail Marijuana Sales
+</p>,
+                        <p>
+                          <span
+                                                    className="label"
+                          >
+                                                     Session: 
+                          </span>
+                           
+                          2017B
+</p>,
+                        <p
+                          className="gov-signature"
+>
+                          <em>
+                                                     
+                          </em>
+</p>,
+                      ],
+                      "className": "bill-content",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            "Taxation Of Retail Marijuana Sales",
+                          ],
+                          "className": "bill-title",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          "Taxation Of Retail Marijuana Sales",
+                        ],
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <span
+                              className="label"
+>
+                               Session: 
+</span>,
+                            " ",
+                            "2017B",
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": " Session: ",
+                              "className": "label",
+                            },
+                            "ref": null,
+                            "rendered": " Session: ",
+                            "type": "span",
+                          },
+                          " ",
+                          "2017B",
+                        ],
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <em>
+                             
+</em>,
+                          "className": "gov-signature",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              null,
+                              null,
+                              " ",
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            null,
+                            null,
+                            " ",
+                          ],
+                          "type": "em",
+                        },
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="card-hed"
+>
+                      <h3>
+                                             
+                                            <span
+                                                                  className="check-icon"
+                                            >
+                                                                   
+                                                                  <FaCheck />
+                                                                   
+                                            </span>
+                                            SB 17-126
+                                              
+                      </h3>
+</div>,
+                    <div
+                      className="bill-content"
+>
+                      <p
+                                            className="bill-title"
+                      >
+                                             
+                                            Domestic Violence Fatality Review Board
+                      </p>
+                      <p>
+                                            <span
+                                                                  className="label"
+                                            >
+                                                                   Session: 
+                                            </span>
+                                             
+                                            2017A
+                      </p>
+                      <p
+                                            className="gov-signature"
+                      >
+                                            <em>
+                                                                  Signed by Governor
+                                                                   on 6/8/2017
+                                                                   
+                                            </em>
+                      </p>
+</div>,
+                  ],
+                  "className": "card",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h3>
+                         
+                        <span
+                                                className="check-icon"
+                        >
+                                                 
+                                                <FaCheck />
+                                                 
+                        </span>
+                        SB 17-126
+                          
+</h3>,
+                      "className": "card-hed",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          " ",
+                          <span
+                            className="check-icon"
+>
+                             
+                            <FaCheck />
+                             
+</span>,
+                          "SB 17-126",
+                          "  ",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        " ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              " ",
+                              <FaCheck />,
+                              " ",
+                            ],
+                            "className": "check-icon",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            " ",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "function",
+                              "props": Object {},
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            " ",
+                          ],
+                          "type": "span",
+                        },
+                        "SB 17-126",
+                        "  ",
+                      ],
+                      "type": "h3",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p
+                          className="bill-title"
+>
+                           
+                          Domestic Violence Fatality Review Board
+</p>,
+                        <p>
+                          <span
+                                                    className="label"
+                          >
+                                                     Session: 
+                          </span>
+                           
+                          2017A
+</p>,
+                        <p
+                          className="gov-signature"
+>
+                          <em>
+                                                    Signed by Governor
+                                                     on 6/8/2017
+                                                     
+                          </em>
+</p>,
+                      ],
+                      "className": "bill-content",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            "Domestic Violence Fatality Review Board",
+                          ],
+                          "className": "bill-title",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          "Domestic Violence Fatality Review Board",
+                        ],
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <span
+                              className="label"
+>
+                               Session: 
+</span>,
+                            " ",
+                            "2017A",
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": " Session: ",
+                              "className": "label",
+                            },
+                            "ref": null,
+                            "rendered": " Session: ",
+                            "type": "span",
+                          },
+                          " ",
+                          "2017A",
+                        ],
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <em>
+                            Signed by Governor
+                             on 6/8/2017
+                             
+</em>,
+                          "className": "gov-signature",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Signed by Governor",
+                              " on 6/8/2017",
+                              " ",
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Signed by Governor",
+                            " on 6/8/2017",
+                            " ",
+                          ],
+                          "type": "em",
+                        },
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

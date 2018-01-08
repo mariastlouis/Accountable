@@ -1,6 +1,3 @@
-import getLawmaker from '../helper/helper.js';
-
-
 
 export const makeLawmakerArray = lawmakers => ({
   type: 'MAKE_LAWMAKER_ARRAY',
