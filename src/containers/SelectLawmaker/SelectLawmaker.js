@@ -28,8 +28,8 @@ getSelect = () => {
 
   selectLawmaker = async(event, id) => {
   const lawmakerData = await selectNewLawmaker(id);
-  console.log(lawmakerData)
   this.props.lawmakerSelect(lawmakerData);
+  console.log(this.props)
   this.props.history.push(`/lawmakers/${id}`);
 }
 
