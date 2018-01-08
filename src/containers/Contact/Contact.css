@@ -94,3 +94,8 @@ p.right-side-info {
 .committees {
   margin-left: 20px;
   margin-right: 20px; }
+
+@media screen and (max-width: 600px) {
+  .main-contact-content {
+    flex-direction: column;
+    align-items: center; } }

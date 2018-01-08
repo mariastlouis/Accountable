@@ -12,12 +12,14 @@ const Home = () => {
       <Header />
       
       <div className = "website-description">
+        <div className = "content-container">
         <h1 className = 'main-hed'> Dig deep into Colorado State Politics </h1>
         <div className = "description-text">
           <div> <span className = "icon"> <MapMarker /> </span> Find your state lawmakers</div>
           <div> <span className = "icon"> <Binoculars /> </span> Track their progress </div>
           <div> <span className = "icon"> <Search /> </span>Search bills and committees </div>
 
+        </div>
         </div>
       </div>
       

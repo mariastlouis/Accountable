@@ -81,19 +81,21 @@ export class AddressForm extends Component {
     return (
       <div className = 'address-form'>
         <div className = 'input-info'>
-          <div className = 'left-side'>
-            <h2 className = 'highlight'> Enter your address </h2>
-            <form onSubmit={this.handleFormSubmit}>
+         <div className = 'input-content'>
+            <div className = 'left-side'>
+              <h2 className = 'highlight'> Enter your address </h2>
+              <form onSubmit={this.handleFormSubmit}>
       
-              <div className = "input">
+                <div className = "input">
 
-                <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} />
-              </div>
+                  <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} />
+                </div>
               <div className = "button-class">
                 <button type="submit" className = "submit-button"> Find my lawmakers</button>
               </div>
             </form>
           </div>
+
           <div className = "middle-div">
             <span className = 'big-Or'> OR </span>
           </div>
@@ -102,6 +104,7 @@ export class AddressForm extends Component {
             <SelectLawmaker />
 
           
+          </div>
           </div>
         </div>
 

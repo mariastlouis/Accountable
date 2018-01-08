@@ -81,3 +81,10 @@ p.right-side-info {
 }
 
 
+@media screen and (max-width: 600px) {
+  .main-contact-content {
+    flex-direction: column;
+    align-items: center;
+ }
+}
+
