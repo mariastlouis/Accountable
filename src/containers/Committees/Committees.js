@@ -14,10 +14,10 @@ const Committees = ({committees}) => {
       const committeeKeys = Object.keys(committees).map((committee, index) =>{
         if (committees[committee].name !== 'none') {
           return (
-            <div key = {index}>
-              <p> <span className = "darker">{capitalize(committees[committee].position)} </span>
-             of <a href = {committees[committee].website}> {committees[committee].name} </a></p>
-            </div>
+            
+              <li className = "committee-element"key = {index}> <span className = "darker">{capitalize(committees[committee].position)} </span>
+             of <a href = {committees[committee].website}> {committees[committee].name} </a></li>
+          
           );
         }
       });
@@ -31,7 +31,9 @@ const Committees = ({committees}) => {
         <h2> Committee Assignments </h2>
       </div>
       <div className = "committee-info">
+        <ul>
         {mapCommittee(committees)}
+        </ul>
       </div>
       <hr />
     </div>

@@ -49,8 +49,10 @@ ShallowWrapper {
         <div
           className="committee-info"
 >
-          <div>
-                    <p>
+          <ul>
+                    <li
+                              className="committee-element"
+                    >
                                
                               <span
                                         className="darker"
@@ -66,8 +68,8 @@ ShallowWrapper {
                                         Executive Committee of the Legislative Council
                                          
                               </a>
-                    </p>
-          </div>
+                    </li>
+          </ul>
 </div>,
         <hr />,
       ],
@@ -104,39 +106,40 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            undefined,
-            <div>
-              <p>
-                             
-                            <span
-                                          className="darker"
-                            >
-                                          Member
-                                           
-                            </span>
-                            of 
-                            <a
-                                          href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
-                            >
-                                           
-                                          Executive Committee of the Legislative Council
-                                           
-                            </a>
-              </p>
-</div>,
-          ],
+          "children": <ul>
+            <li
+                        className="committee-element"
+            >
+                         
+                        <span
+                                    className="darker"
+                        >
+                                    Member
+                                     
+                        </span>
+                        of 
+                        <a
+                                    href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                        >
+                                     
+                                    Executive Committee of the Legislative Council
+                                     
+                        </a>
+            </li>
+</ul>,
           "className": "committee-info",
         },
         "ref": null,
-        "rendered": Array [
-          undefined,
-          Object {
-            "instance": null,
-            "key": "1",
-            "nodeType": "host",
-            "props": Object {
-              "children": <p>
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              <li
+                className="committee-element"
+>
                  
                 <span
                                 className="darker"
@@ -152,12 +155,15 @@ ShallowWrapper {
                                 Executive Committee of the Legislative Council
                                  
                 </a>
-</p>,
-            },
-            "ref": null,
-            "rendered": Object {
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
               "instance": null,
-              "key": undefined,
+              "key": "1",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -177,6 +183,7 @@ ShallowWrapper {
                      
 </a>,
                 ],
+                "className": "committee-element",
               },
               "ref": null,
               "rendered": Array [
@@ -221,11 +228,11 @@ ShallowWrapper {
                   "type": "a",
                 },
               ],
-              "type": "p",
+              "type": "li",
             },
-            "type": "div",
-          },
-        ],
+          ],
+          "type": "ul",
+        },
         "type": "div",
       },
       Object {
@@ -257,8 +264,10 @@ ShallowWrapper {
           <div
             className="committee-info"
 >
-            <div>
-                        <p>
+            <ul>
+                        <li
+                                    className="committee-element"
+                        >
                                      
                                     <span
                                                 className="darker"
@@ -274,8 +283,8 @@ ShallowWrapper {
                                                 Executive Committee of the Legislative Council
                                                  
                                     </a>
-                        </p>
-            </div>
+                        </li>
+            </ul>
 </div>,
           <hr />,
         ],
@@ -312,39 +321,40 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              undefined,
-              <div>
-                <p>
-                                 
-                                <span
-                                                className="darker"
-                                >
-                                                Member
-                                                 
-                                </span>
-                                of 
-                                <a
-                                                href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
-                                >
-                                                 
-                                                Executive Committee of the Legislative Council
-                                                 
-                                </a>
-                </p>
-</div>,
-            ],
+            "children": <ul>
+              <li
+                            className="committee-element"
+              >
+                             
+                            <span
+                                          className="darker"
+                            >
+                                          Member
+                                           
+                            </span>
+                            of 
+                            <a
+                                          href="http://leg.colorado.gov/committees/executive-committee-legislative-council/2017-regular-session"
+                            >
+                                           
+                                          Executive Committee of the Legislative Council
+                                           
+                            </a>
+              </li>
+</ul>,
             "className": "committee-info",
           },
           "ref": null,
-          "rendered": Array [
-            undefined,
-            Object {
-              "instance": null,
-              "key": "1",
-              "nodeType": "host",
-              "props": Object {
-                "children": <p>
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                undefined,
+                <li
+                  className="committee-element"
+>
                    
                   <span
                                     className="darker"
@@ -360,12 +370,15 @@ ShallowWrapper {
                                     Executive Committee of the Legislative Council
                                      
                   </a>
-</p>,
-              },
-              "ref": null,
-              "rendered": Object {
+</li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+              Object {
                 "instance": null,
-                "key": undefined,
+                "key": "1",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -385,6 +398,7 @@ ShallowWrapper {
                        
 </a>,
                   ],
+                  "className": "committee-element",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -429,11 +443,11 @@ ShallowWrapper {
                     "type": "a",
                   },
                 ],
-                "type": "p",
+                "type": "li",
               },
-              "type": "div",
-            },
-          ],
+            ],
+            "type": "ul",
+          },
           "type": "div",
         },
         Object {
