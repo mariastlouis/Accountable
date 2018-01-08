@@ -2,31 +2,32 @@ import {DetailsPage, mapStateToProps} from './DetailsPage';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { mockSelectedLawmaker } from '../../mockData/mockSelectedLawmaker'
+import { mockStoreData } from '../../mockData/mockStoreData.js';
+import { mockLawmakerArray } from '../../mockData/mockLawmakerArray.js';
+
 
 describe ('DetailsPage tests', () => {
-  let mockLawmakerDetails;
+
+  let renderedPage;
+  let mockProps
 
   beforeEach (() => {
-    mockLawmakerDetails = mockSelectedLawmaker;
-    console.log(mockLawmakerDetails.id)
+
+    mockProps = mockStoreData;
     renderedPage = shallow (
-      <DetailsPage 
-        id = {mockLawmakerDetails.id}
-        firstName = {mockLawmakerDetails.firstName}
-        lastName = {mockLawmakerDetails.lastName}
-        party= {mockLawmakerDetails.party}
-        image = {mockLawmakerDetails.image}
-      />
-    )
+      <DetailsPage />)
 
   });
 
-   it.skip('should render correctly', () =>{
+});
 
-   console.log( renderedPage.debug() );
-  });
-
-
-
+describe('map stateToPropsTests', () => {
+  it('should pull lawmakers from the store', () => {
+    const mockStore = {
+      lawmakers: mockLawmakerArray 
+    }
+    const result = mapStateToProps(mockStore);
+    expect(result.lawmakers).toEqual(mockStore.lawmakers);
+  })
 
 });

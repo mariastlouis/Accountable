@@ -8,6 +8,7 @@ import Header from '../Header/Header'
 
 export const DetailsPage = (props) => {
 
+
 let info = props.lawmakers
 
 const getLawmaker = () => {

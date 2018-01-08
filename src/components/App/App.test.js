@@ -1,8 +1,38 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import  { App, mapDispatchToProps, mapStateToProps  }  from './App.js';
+import { shallow } from 'enzyme';
+import { mockLawmakerArray } from '../../mockData/mockLawmakerArray.js';
 
-it.skip('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+
+describe('mapDispatchToProps tests', () => {
+    let mockDispatch;
+    let result;
+
+    beforeEach(() => {
+      mockDispatch = jest.fn();
+      result = mapDispatchToProps(mockDispatch);
+    });
+
+    it('should call dispatch when storeLawmakers is called', () => {
+      result.storeLawmakers();
+      expect(mockDispatch).toHaveBeenCalled();
+    })
+
+
+    it('should call dispatch when lawmaker click is called', () => {
+      result.lawmakerClick();
+      expect(mockDispatch).toHaveBeenCalled();
+    })
 });
+
+describe('map stateToPropsTests', () => {
+  it('should pull lawmakers from the store', () => {
+    const mockStore = {
+      lawmakers: mockLawmakerArray 
+    }
+    const result = mapStateToProps(mockStore);
+    expect(result.lawmakers).toEqual(mockStore.lawmakers);
+  })
+
+});
+
