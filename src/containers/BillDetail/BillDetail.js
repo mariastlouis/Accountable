@@ -44,27 +44,32 @@ const bills = props.bills
       const billKeys = Object.keys(bills).map((bill, index) => {
     
         return (
+          <div className = "bill-info">
           <div className = "card" key = {index}>
+            <div className = "card-top-content">
             <div className = "card-hed">
               <h3> <span className = "check-icon"> {checked(bills[bill].signed.signAction)} </span>
                 {bills[bill].billTitleId}  </h3>
             </div>
             <div className = "bill-content">
-            
-              <p className = "bill-title"> {bills[bill].billTitle}</p>
+              <div className = "bill-title-div">
+                <p className = "bill-title"> {bills[bill].billTitle}</p>
+              </div>
               <p><span className = "label"> Session: </span> {bills[bill].session}</p>
               <p className = "gov-signature"><em>{signed(bills[bill].signed.signAction)}
                 {formatDate(bills[bill].signed.signAction, 
                   bills[bill].signed.signDate)} </em></p>   
             </div>
-              <button className = "get-bill-button" 
-                onClick = {() => chooseBill(bills[bill].billId)}>
-              <Link className = 'bill-link' to = {`/bills/${bills[bill].billId}`}> 
-                Learn more
-              </Link>
-            </button> 
-
-
+            </div>
+            <div className = "card-footer">
+               <button className = "get-bill-button" 
+                  onClick = {() => chooseBill(bills[bill].billId)}>
+                <Link className = 'bill-link' to = {`/bills/${bills[bill].billId}`}> 
+                  Learn more
+                </Link>
+              </button> 
+            </div>
+            </div>
 
           </div>
         );
