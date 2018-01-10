@@ -182,6 +182,7 @@ export const getBillDetail = async(billId) => {
   const billFetch = await fetch(`https:openstates.org/api/v1/bills/${billId}/?apikey=${key}`);
   const billObject = await billFetch.json();
   const sponsorPromises = await getBillSponsors(billObject.sponsors)
+
   return {
     title: billObject.title,
     billId: billObject.id,
@@ -190,8 +191,10 @@ export const getBillDetail = async(billId) => {
     billUrl: billObject.sources[0].url,
     summary: billObject.summary,
     sponsors: sponsorPromises,
-    latestAction: billObject.actions[0].action,
-    latestDate: billObject.actions[0].date
+    allActions: billObject.actions,
+    signAction: billObject.actions[0].action,
+    signDate: billObject.actions[0].date
+    // latestDate: billObject.actions[0].date
   }; 
 };
 

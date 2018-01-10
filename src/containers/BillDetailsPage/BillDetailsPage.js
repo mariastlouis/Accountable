@@ -6,6 +6,7 @@ import { Link, withRouter} from 'react-router-dom';
 import './BillDetailsPage.css';
 import {selectNewLawmaker} from '../../helper/helper.js';
 import * as actions from '../../actions/';
+import Check from 'react-icons/lib/fa/check';
 
 
 const BillDetailsPage = (props) => {
@@ -17,6 +18,41 @@ const BillDetailsPage = (props) => {
     props.lawmakerClick(lawmakerData);
 
  }
+
+  const getCheck = (action) => {
+  return action === 'Governor Signed' || action === 'Governor Became Law' ? <Check /> : null
+  }
+
+  const headMessage = (action, date) => {
+  let signDate = formatDate(date);
+  return action === 'Governor Signed' ? 'Signed by governor on ' + signDate  : null
+  }
+
+
+  const formatDate = (date) => {
+    const newDate = new Date(date);
+    const signDay = newDate.getDate();
+    const signMonth = newDate.getUTCMonth()+1;
+    const signYear = newDate.getFullYear();
+    const formattedDate = signMonth + '/' + signDay + '/' + signYear;
+
+    return formattedDate
+  };
+
+const actionMap = (actions, index) => {
+  if (actions) {
+  const actionKeys = Object.keys(actions).map((action) => {
+    const actionInfo = actions[action]
+      return (
+        <div className = "action-info"> 
+            <p> <span className = "label"> Date: </span> {formatDate(actionInfo.date)} </p>
+            <p> <span className = "label"> Action: </span> {actionInfo.action}</p>
+        </div>
+      )
+  });
+  return actionKeys;
+  }
+}
 
 
  const sponsorMap = (sponsors, index) => {
@@ -39,7 +75,6 @@ const BillDetailsPage = (props) => {
                 Learn more
                </Link>
             </button> 
-
             </div>
         </div>
       )
@@ -57,6 +92,9 @@ const BillDetailsPage = (props) => {
         <h2 className = "secondary-hed">
           {bill.title}
         </h2>
+        <div className = "governor-sign-hed">
+        <h2> <span className = "accent">{getCheck(bill.signAction)}</span> {headMessage(bill.signAction, bill.signDate)} </h2>
+        </div>
         <div className = "bill-button">
           <a className = "bill-description-button" href = {bill.billUrl}> Full bill description </a>
           <hr className = "line-top" /> 
@@ -67,7 +105,14 @@ const BillDetailsPage = (props) => {
           <div className = "sponsor-card-holder">
             {sponsorMap(bill.sponsors)}
           </div>
+         
         </div>
+          <hr className = "line-top" /> 
+        </div>
+        <div className = "action-section">
+        <h2 className = "action-hed"> Actions on this bill</h2>
+            {actionMap(bill.allActions)}
+
         </div>
     </div>
   )
