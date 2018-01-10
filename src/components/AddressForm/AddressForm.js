@@ -43,14 +43,13 @@ export class AddressForm extends Component {
         return (
           <div className = "selected-lawmakers" key = {index}>
             <div className = "lawmaker-title">
-              <h3 className = 'upper'> {getChamber(lawmakers[lawmaker].chamber)}
-               District {lawmakers[lawmaker].district}</h3>
+              <h3 className = 'upper'> {getChamber(lawmakers[lawmaker].chamber)} District {lawmakers[lawmaker].district}</h3>
               <h3>{lawmakers[lawmaker].first_name} {lawmakers[lawmaker].last_name} </h3>
             </div>
             <img className = 'lawmaker-result-image'src = {lawmakers[lawmaker].photo_url}  />
             <button className = "get-lawmaker-button" 
               onClick = {() => this.chooseLawmaker(lawmakers[lawmaker])}>
-              <Link className = 'lawmaker-link' to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
+              <Link className = 'lawmaker-sponsor-link' to = {`/lawmakers/${lawmakers[lawmaker].id}`}> 
                 Learn more
               </Link>
             </button> 

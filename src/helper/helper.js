@@ -155,7 +155,7 @@ export const getBills = async() => {
   const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session:2017A&apikey=${key}`);
   /*eslint-enable */
 
-  console.log(billFetch)
+
   const billObject = await billFetch.json();
 
   return cleanAllBills(billObject);
@@ -204,6 +204,7 @@ const getBillSponsors = (sponsors) => {
     const partyPromises = await getParty(sponsorData.party);
     const chamberPromises = await getChamber(sponsorData.chamber);
       return {
+        sponsorId: sponsorData.id,
         sponsorFirstName: sponsorData.first_name,
         sponsorLastName: sponsorData.last_name,
         party: partyPromises,
@@ -214,43 +215,6 @@ const getBillSponsors = (sponsors) => {
   })
   return Promise.all(unresolvedPromises)
 }
-// const getBillSponsors = (sponsors) => {
-//   const unresolvedPromises = Object.keys(sponsors).map(async(sponsor) => {
-//     const sponsorInfo = sponsors[sponsor]
-//    debugger;
-    
-
-
-//     return {
-//       sponsors:sponsors[sponsor].id
-//     }
-
-    
-
-//   });
-//   return Promise.all(unresolvedPromises)
-// }
-
-
-// const getCommittees = (committees) => { 
-  
-//   const unresolvedPromises = Object.keys(committees).map(async(committee) =>{
-//     const committeeId = committees[committee].committee_id;
-//     const committeePromises = await getWebsite(committeeId);
-
-  
-//     return {
-//       name: committees[committee].committee || 'none',
-//       position: committees[committee].position || 'none',
-//       committeeId: committees[committee].committee_id || 'none',
-//       chamber: committees[committee].chamber || 'none',
-//       term: committees[committee].term || 'none',
-//       website: committeePromises || 'none'
-//     };
- 
-//   });
-//   return Promise.all(unresolvedPromises);
-// };
 
 
 export const setCoordinates = async(latitude, longitude) => {

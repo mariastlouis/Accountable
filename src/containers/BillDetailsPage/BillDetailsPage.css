@@ -60,3 +60,64 @@ hr {
 .bill-button {
   text-align: center;
   margin-top: 40px; }
+
+.sponsor-card-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  margin-top: 20px; }
+
+.sponsor-card-holder {
+  display: flex;
+  flex-wrap: wrap; }
+
+.sponsor-card {
+  margin: 10px;
+  width: 230px;
+  height: 375px; }
+
+.sponsor-hed {
+  text-align: center; }
+
+.sponsor-section {
+  margin-top: 20px; }
+
+.line-top {
+  margin-top: 30px; }
+
+.sponsor-hed {
+  display: flex;
+  flex-direction: column; }
+
+.sponsor-image {
+  text-align: center;
+  margin-top: 10px; }
+
+.select-lawmaker-button {
+  height: 40px;
+  background: #3a6985;
+  width: 170px; }
+
+.lawmaker-sponsor-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px; }
+
+p.sponsor-party {
+  display: block;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em; }
+
+@media screen and (max-width: 1000px) {
+  .sponsor-card-container {
+    width: 750px; } }
+
+@media screen and (max-width: 750px) {
+  .sponsor-card-container {
+    width: 500px; } }
+
+@media screen and (max-width: 520px) {
+  .sponsor-card-container {
+    width: 250px; } }
