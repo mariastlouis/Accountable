@@ -1,0 +1,54 @@
+@import '../../assets/variable.scss';
+
+.bill-hed {
+  margin-top: 20px;
+
+}
+
+// .bill-summary {
+//   display: flex;
+//   justify-content: center;
+// }
+
+
+.bill-summary-text{
+  width: 70%;
+  margin: auto;
+  height: 200px;
+  overflow: scroll;
+  
+}
+
+.secondary-hed {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bill-description-button {
+  background: $accent-blue;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+}
+
+.bill-description-button:hover{
+  background: $button-hover;
+}
+
+.bill-button {
+  text-align:center;
+  margin-top: 40px;
+}
+// .get-lawmaker-button:hover{
+//   background: $button-hover;
+// }
+
+// .lawmaker-link {
+//   text-decoration: none;
+//   color: white;
+//   font-size: 18px;
+// }

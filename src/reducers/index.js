@@ -1,13 +1,11 @@
 import { combineReducers } from 'redux';
 import lawmakerReducer from './lawmakerReducer/lawmakerReducer.js';
-// import makeMoviesReducer from './makeMoviesReducer/makeMoviesReducer';
-// import userReducers from './userReducers/userReducers';
+import billReducer from './billReducer.js';
 
 
 const rootReducer = combineReducers({
-  lawmakers: lawmakerReducer
-  // movies: makeMoviesReducer,
-  // user: userReducers
+  lawmakers: lawmakerReducer,
+  bills: billReducer
 });
 
 export default rootReducer;
