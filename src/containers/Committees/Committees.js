@@ -36,7 +36,7 @@ const Committees = ({committees}) => {
           {mapCommittee(committees)}
         </ul>
       </div>
-      <hr />
+      
     </div>
 
   );
