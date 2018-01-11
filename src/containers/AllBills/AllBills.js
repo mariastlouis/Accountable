@@ -1,16 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Contact from '../Contact/Contact';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import Check from 'react-icons/lib/fa/check';
-import Card from '../../components/Card/Card.js'
+import Card from '../../components/Card/Card.js';
 
-export const AllBills = (props) => {
 
-const bills = props.lawmakers.bills
+class AllBills extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: '',
+      currentlyDisplayed: []
+    };
+  };
 
-const formatDate = (action, date) => {
+
+componentWillMount() {
+  if(this.props.lawmakers.bills.length) {
+    this.setState({currentlyDisplayed: this.props.lawmakers.bills})
+  }
+}
+
+componentWillReceiveProps(nextProps) {
+  console.log(nextProps.lawmakers)
+  if (nextProps.lawmakers.bills.length) {
+     this.setState({currentlyDisplayed: nextProps.lawmakers.bills})
+  }
+}
+
+ formatDate = (action, date) => {
   const newDate = new Date(date);
   const signDay = newDate.getDate();
   const signMonth = newDate.getUTCMonth()+1;
@@ -21,49 +41,84 @@ const formatDate = (action, date) => {
   };
 
 
-// <p> {bills[bill].billTitle} </p>
-const mapBills = (bills) => {
+// searchBills = (search) => {
+//   let bills = this.props.lawmakers.bills
+//   let billFilter = bills.filter((bill) => {
+//     return bill.billTitle.includes(search.toLowerCase())
+//   })
+//   return billFilter
+// }
 
+searchBills = (search) => {
+  let bills = this.props.lawmakers.bills
+
+  let searchValue = search.toUpperCase();
+  console.log(searchValue)
+
+  let billFilter = bills.filter(bill => bill.billTitle.toUpperCase().includes(searchValue) || bill.action.signAction.toUpperCase().includes(searchValue))
+  this.setState({currentlyDisplayed: billFilter})
+}
+
+mapCards = (bills, index) => {
   if(bills) {
     const billKeys = Object.keys(bills).map((bill, index) => {
-    
+   
       return (
-        <div className = "card" key = {index}>
-          <div className = "card-hed">
-            <h3> <span className = "check-icon"> </span>
-              {bills[bill].billTitleId}  </h3>
-            </div>
-            <div className = "bill-content">
-            
-              <p className = "bill-title"> {bills[bill].billTitle}</p>
-              <p><span className = "label"> Session: </span> {bills[bill].session}</p>
-              <p className = "latest-action"> <span className = "label"> Latest action: </span>
-              {bills[bill].action.signAction}
-              </p>   
-            </div>
-          </div>
-    
-    
-      );
+      <Card 
+      key = {index}
+      titleId = {bills[bill].billTitleId}
+      id = {bills[bill].billId}
+      title = {bills[bill].billTitle}
+      action = {bills[bill].action.signAction}
+      date = {bills[bill].action.signDate}
+      session = {bills[bill].session}
+      /> 
+    )
+
     });
-  return billKeys;
+    return billKeys
   }
 }
 
+  render (){
   return (
+   
+
     <div>
     <Header />
+
     <div className = "bills-page">
-     
+     <h1 className = "accent-hed"> Bills in the 2017 session </h1>
+       <div className = "search-box">
+          <input 
+            className = "search-field"
+            onChange = {event => this.searchBills(event.target.value)}
+            type = "text"
+            placeholder = "Search" />
+  </div>
       <div className = "card-container">
         <div className = "card-holder">  
-          {mapBills(bills)}
+
+            { this.state.currentlyDisplayed.length > 0 ?
+            
+            this.mapCards(this.state.currentlyDisplayed) :
+            <p> loading bills </p>
+
+          }
+
+
+
+       
+        
+
         </div>
       </div>
     
     </div>
     </div>
+  
   );
+}
 };
 
 

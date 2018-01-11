@@ -152,7 +152,7 @@ const getBillSign = async(billId) => {
 
 export const getBills = async() => {
   /*eslint-disable */
-  const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session:2017A&apikey=${key}`);
+  const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session:2017A&page=1&per_page=100&apikey=${key}`);
   /*eslint-enable */
 
 
