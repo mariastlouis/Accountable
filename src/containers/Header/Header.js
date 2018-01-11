@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <div className = 'header'>
       <header>
+        <div className = "header-content">
         <div className = 'logo'>
           <Link to = {'/'}>
             <img src = {accountableLogo} alt = 'logo' />
@@ -16,6 +17,7 @@ const Header = () => {
             <NavLink to = '/lawmakers' className = 'nav'>LAWMAKERS </NavLink>
             <NavLink to = '/bills' className = 'nav'>BILLS </NavLink>
             <NavLink to = '/committees' className = 'nav'>COMMITTEES </NavLink>
+          </div>
           </div>
       </header>
     </div>  

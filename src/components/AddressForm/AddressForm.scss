@@ -1,20 +1,23 @@
 @import '../../assets/variable.scss';
 
 
-.input-info {
-  margin-top: 15px;
-  display: flex;
+// .input-info {
+//   margin-top: 15px;
+//   display: flex;
  
-  justify-content: center;
+//   justify-content: center;
 
-}
+// }
 
 .input-content{
-  width: 70%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 }
 
 form {

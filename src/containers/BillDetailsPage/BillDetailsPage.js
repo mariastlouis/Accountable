@@ -97,7 +97,7 @@ const actionMap = (actions, index) => {
         </div>
         <div className = "bill-button">
           <a className = "bill-description-button" href = {bill.billUrl}> Full bill description </a>
-          <hr className = "line-top" /> 
+         
         </div>
         <div className = "sponsor-section">
         <h2 className = "sponsor-hed"> Bill Sponsors </h2>
@@ -105,9 +105,9 @@ const actionMap = (actions, index) => {
           <div className = "sponsor-card-holder">
             {sponsorMap(bill.sponsors)}
           </div>
-         
+
         </div>
-          <hr className = "line-top" /> 
+        
         </div>
         <div className = "action-section">
         <h2 className = "action-hed"> Actions on this bill</h2>

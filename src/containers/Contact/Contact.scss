@@ -12,6 +12,9 @@ h1.accent-hed {
     justify-content: center;
     font-size: 36px;
     padding: 8px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -22,12 +25,14 @@ h1.accent-hed {
 
 
 .lawmaker-profile {
-  width: 60%;
+  max-width: 1000px;
   display: flex;
   align-items: center; 
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -83,7 +88,7 @@ p.right-side-info {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .lawmaker-profile {
     flex-direction: column;
     align-items: center;

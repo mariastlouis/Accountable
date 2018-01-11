@@ -100,6 +100,9 @@ hr {
   background: #3a6985;
   width: 170px; }
 
+.select-lawmaker-button:hover {
+  background: #5392b7; }
+
 .lawmaker-sponsor-link {
   text-decoration: none;
   color: white;

@@ -87,6 +87,10 @@
   width: 170px;
 }
 
+.select-lawmaker-button:hover {
+  background: $button-hover;
+}
+
 .lawmaker-sponsor-link {
   text-decoration: none;
   color: white;

@@ -33,19 +33,19 @@ hr {
 
 .main-hed {
   margin-bottom: 20px;
-  margin-top: 20px; }
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; }
 
 .website-description {
   color: white;
-  display: flex;
-  justify-content: center;
-  background: #3a6985; }
+  background: #3a6985;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .content-container {
-  width: 70%;
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
+  padding: 20px; }
 
 .description-text {
   display: flex;
@@ -53,12 +53,15 @@ hr {
   justify-content: space-between;
   width: 95%;
   margin: 10px;
-  font-size: 20px; }
+  font-size: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .icon {
   font-size: 30px; }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 650px) {
   .description-text {
     flex-direction: column; }
   .website-description {

@@ -31,7 +31,11 @@ hr {
   height: 1px;
   background: #333; }
 
-header {
+.header-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
