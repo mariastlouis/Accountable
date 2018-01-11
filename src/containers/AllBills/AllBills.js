@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import Check from 'react-icons/lib/fa/check';
 import Card from '../../components/Card/Card.js';
+import './AllBills.css'
 
 
 class AllBills extends Component {
@@ -41,19 +42,10 @@ componentWillReceiveProps(nextProps) {
   };
 
 
-// searchBills = (search) => {
-//   let bills = this.props.lawmakers.bills
-//   let billFilter = bills.filter((bill) => {
-//     return bill.billTitle.includes(search.toLowerCase())
-//   })
-//   return billFilter
-// }
-
 searchBills = (search) => {
   let bills = this.props.lawmakers.bills
 
   let searchValue = search.toUpperCase();
-  console.log(searchValue)
 
   let billFilter = bills.filter(bill => bill.billTitle.toUpperCase().includes(searchValue) || bill.action.signAction.toUpperCase().includes(searchValue))
   this.setState({currentlyDisplayed: billFilter})
@@ -94,22 +86,16 @@ mapCards = (bills, index) => {
             className = "search-field"
             onChange = {event => this.searchBills(event.target.value)}
             type = "text"
-            placeholder = "Search" />
+            placeholder = "Search Bills" />
   </div>
       <div className = "card-container">
         <div className = "card-holder">  
 
-            { this.state.currentlyDisplayed.length > 0 ?
+            { this.state.currentlyDisplayed.length > 0 &&
             
-            this.mapCards(this.state.currentlyDisplayed) :
-            <p> loading bills </p>
-
+            this.mapCards(this.state.currentlyDisplayed) 
+            
           }
-
-
-
-       
-        
 
         </div>
       </div>
