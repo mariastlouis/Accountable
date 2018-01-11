@@ -31,6 +31,10 @@ hr {
   height: 1px;
   background: #333; }
 
+.active {
+  background: #941b20;
+  color: white; }
+
 .header-content {
   max-width: 1200px;
   margin-left: auto;
@@ -59,3 +63,14 @@ hr {
 .nav:hover {
   background: #941b20;
   color: white; }
+
+@media screen and (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center; }
+  .nav-bar {
+    margin-top: 10px; } }
+
+@media screen and (max-width: 500px) {
+  .nav-bar {
+    flex-direction: column; } }

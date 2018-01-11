@@ -25,7 +25,7 @@ const BillDetailsPage = (props) => {
 
   const headMessage = (action, date) => {
   let signDate = formatDate(date);
-  return action === 'Governor Signed' ? 'Signed by governor on ' + signDate  : null
+  return action === 'Governor Signed' || action === 'Governor Became Law' ? 'Signed by governor on ' + signDate  : null
   }
 
 

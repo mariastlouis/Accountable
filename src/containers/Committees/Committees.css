@@ -31,13 +31,17 @@ hr {
   height: 1px;
   background: #333; }
 
+.active {
+  background: #941b20;
+  color: white; }
+
 .committee-hed {
   display: flex;
   justify-content: center; }
 
 .committees {
   background: #eaeef1;
-  max-width: 1200px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px; }

@@ -34,3 +34,18 @@
   color: white;
 }
 
+@media screen and (max-width: 900px) {
+ .header-content {
+  flex-direction: column;
+  align-items: center;
+ }
+ .nav-bar {
+  margin-top: 10px;
+}
+}
+
+@media screen and (max-width: 500px) {
+ .nav-bar {
+  flex-direction: column;
+  }
+}

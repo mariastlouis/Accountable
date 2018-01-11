@@ -58,4 +58,9 @@ hr {
   // background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+.active {
+  background: $accent-red;
+  color: white;
+}
+
 

@@ -31,6 +31,10 @@ hr {
   height: 1px;
   background: #333; }
 
+.active {
+  background: #941b20;
+  color: white; }
+
 .input-content {
   max-width: 1200px;
   display: flex;

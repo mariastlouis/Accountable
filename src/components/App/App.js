@@ -32,6 +32,7 @@ render() {
     <div>
 
       <Route exact path = '/' component = {Home} />
+      <Route exact path = '/lawmakers' component = {Home} />
       <Route exact path = '/bills' component = {AllBills} />
       <Route path = '/lawmakers/:id' render = {({match}) => {
         const lawmakerObject = this.props.lawmakers.lawmakers;
