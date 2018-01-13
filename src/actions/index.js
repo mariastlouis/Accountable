@@ -13,3 +13,13 @@ export const setClickedLawmaker = (lawmaker) => ({
   type: 'CLICK_LAWMAKER',
   lawmaker
 });
+
+export const setBillArray = (bills) => ({
+  type: 'MAKE_BILL_ARRAY',
+  bills
+});
+
+export const setClickedBill = (bill) => ({
+  type: 'CLICK_BILL',
+  bill
+});

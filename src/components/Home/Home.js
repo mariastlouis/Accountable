@@ -17,7 +17,7 @@ const Home = () => {
           <div className = "description-text">
             <div> <span className = "icon"> <MapMarker /> </span> Find your state lawmakers</div>
             <div> <span className = "icon"> <Binoculars /> </span> Track their progress </div>
-            <div> <span className = "icon"> <Search /> </span>Search bills and committees </div>
+            <div> <span className = "icon"> <Search /> </span>Search their bills</div>
 
           </div>
         </div>

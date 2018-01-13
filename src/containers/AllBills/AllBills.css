@@ -35,38 +35,13 @@ hr {
   background: #941b20;
   color: white; }
 
-.main-hed {
-  margin-bottom: 20px;
-  margin-top: 10px;
+.search-box {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
-.website-description {
-  color: white;
-  background: #3a6985;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.content-container {
-  padding: 20px; }
-
-.description-text {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 95%;
-  margin: 10px;
-  font-size: 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.icon {
-  font-size: 30px; }
-
-@media screen and (max-width: 650px) {
-  .description-text {
-    flex-direction: column; }
-  .website-description {
-    text-align: center; } }
+.search-field {
+  padding: 10px;
+  font-size: 20px; }

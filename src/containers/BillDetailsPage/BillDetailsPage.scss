@@ -1,0 +1,151 @@
+@import '../../assets/variable.scss';
+
+.bill-hed {
+  margin-top: 20px;
+
+}
+
+.bill-summary-text{
+  width: 70%;
+  margin: auto;
+  height: 200px;
+  overflow: scroll;
+  
+}
+
+.secondary-hed {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bill-description-button {
+  background: $accent-blue;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+}
+
+.bill-description-button:hover{
+  background: $button-hover;
+}
+
+.bill-button {
+  text-align:center;
+  margin-top: 40px;
+}
+
+.sponsor-card-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  margin-top: 20px;
+}
+
+.sponsor-card-holder {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sponsor-card {
+  margin: 10px;
+  width: 230px;
+  height: 375px;
+}
+
+.sponsor-hed {
+  text-align: center;
+}
+
+.action-hed {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sponsor-section {
+  margin-top: 40px;
+}
+
+.line-top {
+  margin-top: 30px;
+}
+
+
+.sponsor-image {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.select-lawmaker-button {
+  height: 40px;
+  background: $accent-blue;
+  width: 170px;
+}
+
+.select-lawmaker-button:hover {
+  background: $button-hover;
+}
+
+.lawmaker-sponsor-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.accent {
+  color: $accent-blue;
+  font-size: 40px;
+}
+
+.action-section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+p.sponsor-party {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+.governor-sign-hed {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 45px;
+}
+
+.action-info:nth-child(even){
+    background-color: #eaeef1;
+}
+
+.action-info {
+ padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .sponsor-card-container {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .sponsor-card-container { 
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .sponsor-card-container { 
+    width: 250px;
+  }
+}
+

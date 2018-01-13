@@ -1,0 +1,14 @@
+@import '../../assets/variable.scss';
+
+.search-box {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-field {
+ padding: 10px;
+ font-size: 20px;
+}

@@ -31,17 +31,19 @@ hr {
   height: 1px;
   background: #333; }
 
-.input-info {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center; }
+.active {
+  background: #941b20;
+  color: white; }
 
 .input-content {
-  width: 70%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  flex-direction: row; }
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px; }
 
 form {
   display: flex;

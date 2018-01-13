@@ -2,7 +2,7 @@
 const defaultState = 
   {
     isSelected: [],
-    lawmakers: []
+    lawmakers: [],
   };
 
 const lawmakerReducer = (state = defaultState, action) =>{

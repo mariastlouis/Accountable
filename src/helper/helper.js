@@ -10,7 +10,6 @@ export const getLawmaker = async() => {
 
 const cleanLawmaker = (lawmakers) => {
   try {
-    // let lawmakerKeys = Object.keys(lawmakers);
     const unresolvedPromises =  Object.keys(lawmakers).map(async(lawmaker) => {
       return {
         id: lawmakers[lawmaker].id,
@@ -50,7 +49,7 @@ export const cleanLawmakerSelect = (async(lawmakers) => {
     const committeePromises = await getCommittees(committees);
     const chamberPromises = await getChamber(lawmakers.chamber);
     const partyPromises = await getParty(lawmakers.party);
-    const billPromises = await getBills(lawmakers.id);
+    const billPromises = await getLawmakerBills(lawmakers.id);
     return {
 
       id: lawmakers.id,
@@ -116,18 +115,18 @@ const getWebsite = async(committeeId) => {
 
 };
 
-const getBills = async(lawmakerId) =>{
+const getLawmakerBills = async(lawmakerId) =>{
   /*eslint-disable */
   const billFetch = await fetch(`https:openstates.org/api/v1/bills/?sponsor_id=${lawmakerId}&page=1&per_page=25&apikey=${key}`);
   /*eslint-enable */
   const billObject = await billFetch.json();
-  return cleanBills(billObject);
+  return cleanLawmakerBills(billObject);
 };
 
 
-const cleanBills = (bills) => {
+const cleanLawmakerBills = (bills) => {
   const unresolvedPromises = Object.keys(bills).map(async(bill) => {
-    const billPromises = await getBillDetail(bills[bill].id);
+    const billPromises = await getBillSign(bills[bill].id);
     
     return {
       billTitle: bills[bill].title,
@@ -141,7 +140,7 @@ const cleanBills = (bills) => {
   return Promise.all(unresolvedPromises);
 };
 
-const getBillDetail = async(billId) => {
+const getBillSign = async(billId) => {
   const billFetch = await fetch(`https:openstates.org/api/v1/bills/${billId}/?apikey=${key}`);
   const billObject = await billFetch.json();
   return {
@@ -151,6 +150,74 @@ const getBillDetail = async(billId) => {
 };
 
 
+export const getBills = async() => {
+  /*eslint-disable */
+  const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session:2017A&page=1&per_page=100&apikey=${key}`);
+  /*eslint-enable */
+
+
+  const billObject = await billFetch.json();
+
+  return cleanAllBills(billObject);
+};
+
+
+const cleanAllBills = (bills) => {
+  const unresolvedPromises = Object.keys(bills).map(async(bill) => {
+    const billPromises = await getBillSign(bills[bill].id);
+    return {
+      billTitle: bills[bill].title,
+      billId: bills[bill].id,
+      billTitleId: bills[bill].bill_id,
+      session: bills[bill].session,
+      action: billPromises
+    };
+
+  });
+  return Promise.all(unresolvedPromises);
+};
+
+
+export const getBillDetail = async(billId) => {
+  const billFetch = await fetch(`https:openstates.org/api/v1/bills/${billId}/?apikey=${key}`);
+  const billObject = await billFetch.json();
+  const sponsorPromises = await getBillSponsors(billObject.sponsors)
+
+  return {
+    title: billObject.title,
+    billId: billObject.id,
+    billTitleId: billObject.bill_id,
+    session: billObject.session,
+    billUrl: billObject.sources[0].url,
+    summary: billObject.summary,
+    sponsors: sponsorPromises,
+    allActions: billObject.actions,
+    signAction: billObject.actions[0].action,
+    signDate: billObject.actions[0].date
+    // latestDate: billObject.actions[0].date
+  }; 
+};
+
+const getBillSponsors = (sponsors) => {
+
+  const unresolvedPromises = Object.keys(sponsors).map(async(sponsor) => {
+    const sponsorId = sponsors[sponsor].leg_id
+    const sponsorFetch = await fetch(`https://openstates.org/api/v1/legislators/${sponsorId}/?apikey=${key}`)
+    const sponsorData = await sponsorFetch.json();
+    const partyPromises = await getParty(sponsorData.party);
+    const chamberPromises = await getChamber(sponsorData.chamber);
+      return {
+        sponsorId: sponsorData.id,
+        sponsorFirstName: sponsorData.first_name,
+        sponsorLastName: sponsorData.last_name,
+        party: partyPromises,
+        image: sponsorData.photo_url,
+        chamber: chamberPromises,
+        district: sponsorData.district
+      }
+  })
+  return Promise.all(unresolvedPromises)
+}
 
 
 export const setCoordinates = async(latitude, longitude) => {
