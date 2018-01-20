@@ -10,6 +10,7 @@ import rootReducer from './reducers';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
+
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 const store = createStore(rootReducer, devTools, applyMiddleware(thunk, logger));
@@ -18,7 +19,9 @@ const store = createStore(rootReducer, devTools, applyMiddleware(thunk, logger))
 const router = (
   <Provider store = {store}>
     <BrowserRouter>
+     
       <App store = {store} />
+  
     </BrowserRouter>
   </Provider>
 );

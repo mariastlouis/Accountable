@@ -1,7 +1,7 @@
 const defaultState = 
   {
     billSelected: [],
-    bills: [],
+    bills: []
   };
 
 const billReducer = (state = defaultState, action) =>{

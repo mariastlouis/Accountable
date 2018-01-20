@@ -3,6 +3,8 @@ const defaultState =
   {
     isSelected: [],
     lawmakers: [],
+    localLawmakers: [],
+    address: 'Denver, CO'
   };
 
 const lawmakerReducer = (state = defaultState, action) =>{
@@ -27,6 +29,20 @@ const lawmakerReducer = (state = defaultState, action) =>{
       ...state,
       isSelected:action.lawmaker
     };
+
+  case 'SET_LOCAL_LAWMAKERS':
+  
+    return {
+      ...state,
+      localLawmakers: action.lawmakerArray
+    };
+
+  case 'SET_ADDRESS':
+  
+    return {
+      ...state,
+      address: action.address
+    };    
 
   default: 
     return state;

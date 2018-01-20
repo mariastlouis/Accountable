@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import {getLawmaker, getBills} from '../../helper/helper';
 import DetailsPage from '../../containers/Details/DetailsPage';
-import AllBills from '../../containers/AllBills/AllBills.js'
+import AllBills from '../../containers/AllBills/AllBills.js';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/';
 import { Route, withRouter } from 'react-router-dom';
 import Home from '../../components/Home/Home';
 import PropTypes from 'prop-types';
-import BillDetailsPage from '../../containers/BillDetailsPage/BillDetailsPage.js'
+import BillDetailsPage from '../../containers/BillDetailsPage/BillDetailsPage.js';
 
 
 export class App extends Component {
   constructor() {
     super();
-    }
+  }
 
 
 componentDidMount = async ()  => {
@@ -30,24 +30,26 @@ render() {
       
 
     <div>
-
+      
       <Route exact path = '/' component = {Home} />
       <Route exact path = '/lawmakers' component = {Home} />
       <Route exact path = '/bills' component = {AllBills} />
       <Route path = '/lawmakers/:id' render = {({match}) => {
         const lawmakerObject = this.props.lawmakers.lawmakers;
         const {id} = match.params;
+
         const lawmakerDetail = 
           Object.keys(lawmakerObject).find(lawmaker => lawmakerObject[lawmaker].id === id);
+        
         return <DetailsPage />;
       }} />
-        <Route path = '/bills/:id' render = {({match}) => {
-         const billObject = this.props.bills.bills;
-         const {id} = match.params;
-         const billDetail = 
+      <Route path = '/bills/:id' render = {({match}) => {
+        const billObject = this.props.bills.bills;
+        const {id} = match.params;
+        const billDetail = 
            Object.keys(billObject).find(bill => billObject[bill].billId === id);
-         return <BillDetailsPage />;
-       }} />
+        return <BillDetailsPage />;
+      }} />
 
 
     </div>

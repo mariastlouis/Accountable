@@ -40,6 +40,9 @@ hr {
   justify-content: center; }
 
 .card-container {
+  width: 1000px; }
+
+.card-container {
   display: flex;
   flex-direction: row;
   margin-left: auto;
