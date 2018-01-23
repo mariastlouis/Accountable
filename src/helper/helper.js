@@ -152,7 +152,8 @@ const getBillSign = async(billId) => {
 
 export const getBills = async() => {
   /*eslint-disable */
-  const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session:2017A&page=1&per_page=100&apikey=${key}`);
+  const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session&apikey=${key}`);
+  // const billFetch = await fetch(`https://openstates.org/api/v1/bills/?state=co&search_window=session:2017A&page=1&per_page=100&apikey=${key}`);
   /*eslint-enable */
 
 
@@ -181,7 +182,7 @@ const cleanAllBills = (bills) => {
 export const getBillDetail = async(billId) => {
   const billFetch = await fetch(`https:openstates.org/api/v1/bills/${billId}/?apikey=${key}`);
   const billObject = await billFetch.json();
-  const sponsorPromises = await getBillSponsors(billObject.sponsors)
+  const sponsorPromises = await getBillSponsors(billObject.sponsors);
 
   return {
     title: billObject.title,
@@ -201,23 +202,23 @@ export const getBillDetail = async(billId) => {
 const getBillSponsors = (sponsors) => {
 
   const unresolvedPromises = Object.keys(sponsors).map(async(sponsor) => {
-    const sponsorId = sponsors[sponsor].leg_id
-    const sponsorFetch = await fetch(`https://openstates.org/api/v1/legislators/${sponsorId}/?apikey=${key}`)
+    const sponsorId = sponsors[sponsor].leg_id;
+    const sponsorFetch = await fetch(`https://openstates.org/api/v1/legislators/${sponsorId}/?apikey=${key}`);
     const sponsorData = await sponsorFetch.json();
     const partyPromises = await getParty(sponsorData.party);
     const chamberPromises = await getChamber(sponsorData.chamber);
-      return {
-        sponsorId: sponsorData.id,
-        sponsorFirstName: sponsorData.first_name,
-        sponsorLastName: sponsorData.last_name,
-        party: partyPromises,
-        image: sponsorData.photo_url,
-        chamber: chamberPromises,
-        district: sponsorData.district
-      }
-  })
-  return Promise.all(unresolvedPromises)
-}
+    return {
+      sponsorId: sponsorData.id,
+      sponsorFirstName: sponsorData.first_name,
+      sponsorLastName: sponsorData.last_name,
+      party: partyPromises,
+      image: sponsorData.photo_url,
+      chamber: chamberPromises,
+      district: sponsorData.district
+    };
+  });
+  return Promise.all(unresolvedPromises);
+};
 
 
 export const setCoordinates = async(latitude, longitude) => {

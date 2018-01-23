@@ -15,8 +15,25 @@ export class AddressForm extends Component {
       address: 'Denver, CO',
       selectedLawmakers: []              
     };
-    this.onChange = (address) => this.setState({ address });
+    // this.onChange = (address) => this.setState({ address });
   }
+
+  cachedAddress = () => {
+    const findAddress = localStorage.getItem("Address");
+  
+    if (findAddress) {
+      return this.setState({ address: JSON.parse(findAddress) });
+    } else {
+      return this.setState({address: 'Colorado Springs, CO'});
+    }
+
+  }
+
+  onChange = (address) => {
+    localStorage.setItem("Address", JSON.stringify(address));
+    this.setState({ address });
+  }
+
 
   handleFormSubmit = (async(event) => {
     event.preventDefault();
@@ -24,17 +41,31 @@ export class AddressForm extends Component {
     const getCoords = await getLatLng(getAddress[0]);
     const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
     // const setLawmakers = await this.mapLawmakers(lawmakerCoords);
+   
+    this.props.storeLocalLawmakers(lawmakerCoords);
     this.setState({selectedLawmakers: lawmakerCoords});
+   
 
   })
+
+  handleFormSelect = (async(event) => {
+
+    const getAddress = await geocodeByAddress(this.state.address);
+    const getCoords = await getLatLng(getAddress[0]);
+    const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
+    this.props.storeLocalLawmakers(lawmakerCoords);
+    this.props.storeAddress(event);
+    localStorage.setItem("Address", JSON.stringify(event));
+    this.setState({address: event}); 
+    
+  });
 
   chooseLawmaker = async(lawmaker) => {
     const lawmakerData = await cleanLawmakerSelect(lawmaker);
     this.props.lawmakerClick(lawmakerData);
-    this.setState({address: ''});
   }
 
-
+ 
 
   mapLawmakers = (lawmakers) => {
     if (lawmakers){
@@ -61,7 +92,7 @@ export class AddressForm extends Component {
 
   render() {
     const inputProps = {
-      value: this.state.address,
+      value:  this.state.address,
       onChange: this.onChange
     };
 
@@ -87,7 +118,7 @@ export class AddressForm extends Component {
       
                 <div className = "input">
 
-                  <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} />
+                  <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} onSelect={this.handleFormSelect}/>
                 </div>
                 <div className = "button-class">
                   <button type="submit" className = "submit-button"> Find my lawmakers</button>
@@ -108,26 +139,36 @@ export class AddressForm extends Component {
         </div>
 
         <div className = 'lawmaker-results'>
-          {this.mapLawmakers(this.state.selectedLawmakers)}
+          {this.mapLawmakers(this.props.lawmakers.localLawmakers)}
         </div>
       </div>
     );
   }
 }
 
-
+export const mapStateToProps = store => {
+  return {
+    lawmakers: store.lawmakers
+  };
+};
 
 export const mapDispatchToProps = dispatch => {
   return {
     lawmakerClick: lawmaker => {
       dispatch(actions.setClickedLawmaker(lawmaker));
+    },
+    storeLocalLawmakers: lawmakerArray => {
+      dispatch(actions.setLocalLawmakers(lawmakerArray));
+    },
+    storeAddress: address => {
+      dispatch(actions.setAddress(address));
     }
    
   };
 };
 
 
-export default withRouter(connect(null, mapDispatchToProps)(AddressForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddressForm));
 
 AddressForm.propTypes = {
   lawmakerClick: PropTypes.func

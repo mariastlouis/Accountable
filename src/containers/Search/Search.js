@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 export const Search = (props) => {
-console.log(props)
+  console.log(props);
 
 
-const searchBills = (search) => {
-  console.log(search)
-}
+  const searchBills = (search) => {
+    console.log(search);
+  };
 
 
-return (
-  <div className = "search-box">
-    <input 
-      className = "search-field"
-      onChange = {event => searchBills(event.target.value)}
-      type = "text"
-      placeHOlder = "Search" />
-  </div>
-  )
-}
+  return (
+    <div className = "search-box">
+      <input 
+        className = "search-field"
+        onChange = {event => searchBills(event.target.value)}
+        type = "text"
+        placeHOlder = "Search" />
+    </div>
+  );
+};
 
 
 export const mapStateToProps = store => {

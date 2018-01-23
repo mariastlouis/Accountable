@@ -23,3 +23,13 @@ export const setClickedBill = (bill) => ({
   type: 'CLICK_BILL',
   bill
 });
+
+export const setLocalLawmakers = (lawmakerArray) => ({
+  type: 'SET_LOCAL_LAWMAKERS',
+  lawmakerArray
+});
+
+export const setAddress = (address) => ({
+  type: 'SET_ADDRESS',
+  address
+});
