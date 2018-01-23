@@ -85,7 +85,8 @@ const BillDetailsPage = (props) => {
 
   };
 
-  // <a className = "bill-description-button" href = {bill.billUrl}> Full bill description </a>
+window.scrollTo(0, 0);
+
   return (
     <div className = "bill-details-page">
       <Header />

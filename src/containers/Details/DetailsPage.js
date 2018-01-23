@@ -57,7 +57,7 @@ export const DetailsPage = (props) => {
     );
   };
 
-
+window.scrollTo(0, 0);
 
   return (
     <div className = "details-page">
