@@ -24,7 +24,8 @@ const cleanLawmaker = (lawmakers) => {
           active: lawmakers[lawmaker].active,
           occupation: lawmakers[lawmaker]['+occupation'],
           chamber: lawmakers[lawmaker].chamber,
-          district: lawmakers[lawmaker].district
+          district: lawmakers[lawmaker].district,
+          email: lawmakers[lawmaker].email
         }
       };
     });
@@ -63,7 +64,8 @@ export const cleanLawmakerSelect = (async(lawmakers) => {
         active: lawmakers.active,
         occupation: lawmakers['+occupation'],
         chamber: chamberPromises,
-        district: lawmakers.district
+        district: lawmakers.district,
+        email: lawmakers.email
       },
       committees: committeePromises,
       bills: billPromises

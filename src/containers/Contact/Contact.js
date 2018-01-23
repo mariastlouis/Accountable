@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Contact.css';
 
 /*eslint-disable */
-const Contact = ({firstName, lastName, party, image, website, phone, occupation, district, chamber}) => {
+const Contact = ({firstName, lastName, party, image, website, phone, occupation, district, chamber, email}) => {
 /*eslint-enable */ 
 
   const label = (field, label) => {
@@ -29,6 +29,13 @@ const Contact = ({firstName, lastName, party, image, website, phone, occupation,
           <p> <span className = "label"> {label(party, 'Website:')} </span>
             <a href = {website}> {firstName} {lastName}'s Website </a> </p>
           <p> <span className = "label">{label(phone, 'Phone:')} </span> {phone} </p>
+           <p> <span className = "label">{label(email, 'Email:')} </span>
+            <a href= {"mailto:" + email } target="_top"> {email} </a>
+            </p>
+          
+
+
+
           <p> <span className = "label">{label(occupation, 'Occupation:')}
           </span> {occupation} </p>
          

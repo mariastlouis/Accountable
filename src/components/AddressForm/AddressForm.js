@@ -12,7 +12,7 @@ export class AddressForm extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      address: 'Denver, CO',
+      address: '',
       selectedLawmakers: []              
     };
     // this.onChange = (address) => this.setState({ address });
@@ -93,7 +93,8 @@ export class AddressForm extends Component {
   render() {
     const inputProps = {
       value:  this.state.address,
-      onChange: this.onChange
+      onChange: this.onChange,
+      placeholder: '123 Main St. Denver, CO'
     };
 
     const myStyles = {

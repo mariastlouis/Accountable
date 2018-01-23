@@ -43,6 +43,7 @@ export const DetailsPage = (props) => {
           occupation = {toMap.occupation}
           district = {toMap.district}
           chamber = {toMap.chamber}
+          email = {toMap.email}
         />
 
         
