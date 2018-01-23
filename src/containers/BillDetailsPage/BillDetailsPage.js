@@ -97,18 +97,22 @@ const BillDetailsPage = (props) => {
         <h2> <span className = "accent">{getCheck(bill.signAction)}</span> {headMessage(bill.signAction, bill.signDate)} </h2>
       </div>
       <div className = "bill-button">
-       
 
         <LinesEllipsis
           text= {bill.summary} 
           maxLine='5'
-          ellipsis= '...Read More'
+          ellipsis= '...'
           trimRight
           basedOn='words'
         />
           
     
          
+      </div>
+       <div className = "action-section">
+        <h2 className = "action-hed"> Actions on this bill</h2>
+        {actionMap(bill.allActions)}
+
       </div>
       <div className = "sponsor-section">
         <h2 className = "sponsor-hed"> Bill Sponsors </h2>
@@ -120,11 +124,7 @@ const BillDetailsPage = (props) => {
         </div>
         
       </div>
-      <div className = "action-section">
-        <h2 className = "action-hed"> Actions on this bill</h2>
-        {actionMap(bill.allActions)}
-
-      </div>
+     
     </div>
   );
 };

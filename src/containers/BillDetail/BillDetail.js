@@ -52,13 +52,13 @@ const BillDetail = (props) => {
                     {bills[bill].billTitleId}  </h3>
                 </div>
                 <div className = "bill-content">
-                  <div className = "bill-title-div">
+                  
                     <p className = "bill-title"> {bills[bill].billTitle}</p>
-                  </div>
+                
                   <p><span className = "label"> Session: </span> {bills[bill].session}</p>
-                  <p className = "gov-signature"><em>{signed(bills[bill].signed.signAction)}
-                    {formatDate(bills[bill].signed.signAction, 
-                      bills[bill].signed.signDate)} </em></p>   
+
+                  <p><span className = "label"> Latest action:</span> {bills[bill].signed.signAction} </p>
+                 
                 </div>
               </div>
               <div className = "card-footer">
@@ -89,7 +89,7 @@ const BillDetail = (props) => {
       <div className = "check-description">
         <p className = "check-paragraph">
           <span className = "check-hed"><Check /> </span>
-          = Bills signed by governor </p>
+          = Bills signed by governor and made into law</p>
       </div>
       <div className = "card-container">
         <div className = "card-holder">  

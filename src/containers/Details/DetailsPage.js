@@ -11,18 +11,7 @@ import {selectNewLawmaker} from '../../helper/helper.js';
 
 export const DetailsPage = (props) => {
 
-  // const getSelection = () => {
-
-  //     console.log(props.lawmakers)
-  
-  // }
-
-
-
-
-
-
-
+ 
   const setLawmakerRoute = async() => {
     const idArray = Object.values(props.match.params);
     const lawmakerId = idArray[0];
