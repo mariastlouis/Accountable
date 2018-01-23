@@ -106,7 +106,7 @@ const BillDetailsPage = (props) => {
           basedOn='words'
         />
           
-    
+      <a className = "bill-description-button" href = {bill.billUrl}> Full bill description </a>
          
       </div>
        <div className = "action-section">
