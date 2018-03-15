@@ -11,5 +11,6 @@ This site was created to help voters hold their lawmamkers accountable by knowin
 * Open states API
 * Jest/Enzyme for testing
 
+![alt text](https://github.com/mariastlouis/weathrly/blob/master/lib/weatherly_demo.gif)
 
 
