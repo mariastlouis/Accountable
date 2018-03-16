@@ -13,9 +13,6 @@ export const Card = (props) => {
     props.billClick(billData); 
   };
 
-
-
-
   return (
 
     <div className = "bill-info">

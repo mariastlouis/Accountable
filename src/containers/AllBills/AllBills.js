@@ -46,7 +46,7 @@ searchBills = (search) => {
 
   let searchValue = search.toUpperCase();
 
-  let billFilter = bills.filter(bill => bill.billTitle.toUpperCase().includes(searchValue) || bill.action.signAction.toUpperCase().includes(searchValue));
+  let billFilter = bills.filter(bill => bill.billTitle.toUpperCase().includes(searchValue) || bill.action.signAction.toUpperCase().includes(searchValue) || bill.billTitleId.toUpperCase().includes(searchValue));
   this.setState({currentlyDisplayed: billFilter});
 }
 

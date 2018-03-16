@@ -85,7 +85,8 @@ const BillDetailsPage = (props) => {
 
   };
 
-  // <a className = "bill-description-button" href = {bill.billUrl}> Full bill description </a>
+window.scrollTo(0, 0);
+
   return (
     <div className = "bill-details-page">
       <Header />
@@ -108,12 +109,7 @@ const BillDetailsPage = (props) => {
           
       <a className = "bill-description-button" href = {bill.billUrl}> Full bill description </a>
          
-      </div>
-       <div className = "action-section">
-        <h2 className = "action-hed"> Actions on this bill</h2>
-        {actionMap(bill.allActions)}
-
-      </div>
+     </div>
       <div className = "sponsor-section">
         <h2 className = "sponsor-hed"> Bill Sponsors </h2>
         <div className = "sponsor-card-container">
@@ -124,6 +120,15 @@ const BillDetailsPage = (props) => {
         </div>
         
       </div>
+
+       
+       <div className = "action-section">
+        <h2 className = "action-hed"> Actions on this bill</h2>
+        {actionMap(bill.allActions)}
+
+      </div>
+
+      
      
     </div>
   );
