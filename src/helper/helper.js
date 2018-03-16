@@ -31,7 +31,7 @@ const cleanLawmaker = (lawmakers) => {
     });
 
     return Promise.all(unresolvedPromises);
-  } catch (type) {
+  }  (type) {
     return Error('fetch failed');
   }
 };
