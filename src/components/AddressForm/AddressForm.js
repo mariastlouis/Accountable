@@ -29,9 +29,10 @@ export class AddressForm extends Component {
 
   }
 
+
   onChange = (address) => {
     localStorage.setItem("Address", JSON.stringify(address));
-    this.setState({ address });
+    this.setState({address: address})
   }
 
 
@@ -39,6 +40,7 @@ export class AddressForm extends Component {
     event.preventDefault();
     const getAddress = await geocodeByAddress(this.state.address);
     const getCoords = await getLatLng(getAddress[0]);
+    console.log('coords', getCoords)
     const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
     // const setLawmakers = await this.mapLawmakers(lawmakerCoords);
    
@@ -48,17 +50,22 @@ export class AddressForm extends Component {
 
   })
 
-  handleFormSelect = (async(event) => {
 
-    const getAddress = await geocodeByAddress(this.state.address);
+   handleSelectedAddress = (async(address) => {
+    this.setState({address: address}); 
+    console.log(address)
+     const getAddress = await geocodeByAddress(address);
+    
     const getCoords = await getLatLng(getAddress[0]);
     const lawmakerCoords = await setCoordinates(getCoords.lat, getCoords.lng);
+
     this.props.storeLocalLawmakers(lawmakerCoords);
-    this.props.storeAddress(event);
-    localStorage.setItem("Address", JSON.stringify(event));
-    this.setState({address: event}); 
-    
-  });
+    this.props.storeAddress(address);
+    localStorage.setItem("Address", JSON.stringify(address));
+   
+   
+
+   })
 
   chooseLawmaker = async(lawmaker) => {
     const lawmakerData = await cleanLawmakerSelect(lawmaker);
@@ -119,7 +126,7 @@ export class AddressForm extends Component {
       
                 <div className = "input">
 
-                  <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} onSelect={this.handleFormSelect}/>
+                  <PlacesAutocomplete styles = {myStyles}inputProps={inputProps} onSelect={this.handleSelectedAddress}/>
                 </div>
                 <div className = "button-class">
                   <button type="submit" className = "submit-button"> Find my lawmakers</button>
